@@ -1,0 +1,72 @@
+header {
+  background-color: white;
+  display: flex;
+  width: 1360px;
+  height: 64px;
+  padding: 0px 40px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 2px 8px 0px #e7e7e7;
+  margin: 0 0 40px 0;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+}
+
+#logo {
+  width: 150px;
+  height: 32px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav li {
+  display: flex;
+  padding: 0px 20px;
+  font-size: 20px;
+}
+
+nav a {
+  height: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+}
+
+.highlighted {
+  border-bottom: 2px solid #1890ff;
+  color: hsla(218, 100%, 52%, 1);
+}
+
+#user {
+  display: flex;
+  width: 150px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+#sign_up {
+  display: flex;
+  height: 30px;
+  padding: 0px 5px 0px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 22px; /* 110% */
+  color: hsla(0, 0%, 100%, 1);
+
+  border-radius: 5px;
+  background: #0a64ff;
+}
