@@ -1,13 +1,15 @@
 import React from "react";
 import UserCard from "./UserCard";
-import "../styles/header.css"
+import "../styles/header.css";
 
 export default function Header() {
   return (
     <header>
-      <div id="logo">
-        <img src="logo.svg" alt="logo" height="32" />
-      </div>
+      <a href="/">
+        <div id="logo">
+          <img src="logo.svg" alt="logo" height="32" />
+        </div>
+      </a>
       <nav>
         <ul>
           <li class="nav_el">
@@ -26,7 +28,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <UserCard/>
+      <UserCard />
     </header>
   );
 }

@@ -11,21 +11,21 @@ export default function Filter() {
           name=""
           id=""
         />
-        <img id="search_icon" src="" alt="" />
+        <img id="search_icon" src="searchIcon.svg"/>
       </div>
       <div id="buttons">
         <div id="filter_buttons">
           <a id="clear_filter" href="">
             Clear filter
-            <img src="" alt="" />
+            <img src="clearFilter.svg" alt="" />
           </a>
           <a id="filter_button" href="">
-            <img src="" alt="" />
+            <img src="filterIcon.svg" alt="" />
             Filter
           </a>
         </div>
-        <a href="">
-          <img src="" alt="" />
+        <a id="addNew" href="">
+          <img src="addNew.svg" alt="" />
           Add new
         </a>
       </div>

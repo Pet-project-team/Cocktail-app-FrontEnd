@@ -5,7 +5,7 @@ export default function UserCard() {
     <div id="user">
       <a id="sign_up" href="">
         Sign up
-        <img src="" alt="" />
+        <img src="signUp.svg" alt="" />
       </a>
     </div>
   );
