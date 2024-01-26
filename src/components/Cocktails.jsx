@@ -1,16 +1,13 @@
 import React from "react";
 import CocktailCard from "./CocktailCard";
+import coctailsList from "../cocktails.json";
 
 export default function Cocktails() {
   return (
     <ul id="Cocktails">
-      <CocktailCard />
-      <CocktailCard />
-      <CocktailCard />
-      <CocktailCard />
-      <CocktailCard />
-      <CocktailCard />
-      <CocktailCard />
+      {coctailsList.map((card) => (
+        <CocktailCard key={card.id} cardInfo = {card} />
+      ))}
     </ul>
   );
 }

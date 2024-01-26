@@ -30,14 +30,20 @@
   background: #fff;
 }
 
-#search_icon {
-  width: 30px;
+#search_button {
+  all: unset;
+  cursor: pointer;
+  height: 30px;
   position: absolute;
   right: 0;
+}
+
+#search_icon {
+  width: 30px;
   border-left: 1px solid #d9d9d9;
 }
 
-input:focus-visible ~ #search_icon {
+input:focus-visible ~ #search_button #search_icon {
   border-left: 2px solid #000000;
 }
 
@@ -48,11 +54,19 @@ input:focus-visible ~ #search_icon {
   gap: 10px;
 }
 
-#buttons a {
+#clear_filter {
+  all: unset;
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif;
+}
+
+#buttons button {
   display: flex;
   align-items: center;
   align-self: stretch;
   line-height: 22px;
+  font-size: 16px;
 }
 
 #filter_button {
@@ -62,6 +76,7 @@ input:focus-visible ~ #search_icon {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 16px;
 
   border-radius: 5px;
   border: 1px solid #d9d9d9;
@@ -72,6 +87,7 @@ input:focus-visible ~ #search_icon {
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
+  cursor: pointer;
 }
 
 #filter_button:hover {
@@ -79,6 +95,11 @@ input:focus-visible ~ #search_icon {
 }
 
 #addNew {
+  all: unset;
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   display: flex;
   height: 30px;
   padding: 0px 10px;

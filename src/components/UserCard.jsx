@@ -16,10 +16,10 @@ export default function UserCard() {
     </div>
   ) : (
     <div id="sign_up_container">
-      <a id="sign_up" href="">
+      <button id="sign_up" href="">
         Sign up
         <img src="signUp.svg" alt="" />
-      </a>
+      </button>
     </div>
   );
 }

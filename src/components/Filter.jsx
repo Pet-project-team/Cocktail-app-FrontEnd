@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/filter.css";
 
 export default function Filter() {
-  let isFiltred = false;
+  let isFiltred = true;
 
   return (
     <div id="filter">
@@ -13,25 +13,27 @@ export default function Filter() {
           name=""
           id=""
         />
-        <img id="search_icon" src="searchIcon.svg" />
+        <button id="search_button">
+          <img id="search_icon" src="searchIcon.svg" />
+        </button>
       </div>
       <div id="buttons">
         <div id="filter_buttons">
           {isFiltred && (
-            <a id="clear_filter" href="">
+            <button id="clear_filter">
               Clear filter
               <img src="clearFilter.svg" alt="" />
-            </a>
+            </button>
           )}
-          <a id="filter_button" href="">
+          <button id="filter_button">
             <img src="filterIcon.svg" alt="" />
             Filter
-          </a>
+          </button>
         </div>
-        <a id="addNew" href="">
+        <button id="addNew" href="">
           <img src="addNew.svg" alt="" />
           Add new
-        </a>
+        </button>
       </div>
     </div>
   );

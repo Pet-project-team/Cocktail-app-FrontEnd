@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Gin",
+        "cocktailName": "Gin & Tonic"
+    },
+    {
+        "id": 2,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Vodka",
+        "cocktailName": "Vodka Martini"
+    },
+    {
+        "id": 3,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Rum",
+        "cocktailName": "Mai Tai"
+    },
+    {
+        "id": 4,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Tequila",
+        "cocktailName": "Margarita"
+    },
+    {
+        "id": 5,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Whiskey",
+        "cocktailName": "Old Fashioned"
+    },
+    {
+        "id": 6,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Rum",
+        "cocktailName": "Piña Colada"
+    },
+    {
+        "id": 7,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Gin",
+        "cocktailName": "Negroni"
+    },
+    {
+        "id": 8,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Vodka",
+        "cocktailName": "Cosmopolitan"
+    },
+    {
+        "id": 9,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Whiskey",
+        "cocktailName": "Whiskey Sour"
+    },
+    {
+        "id": 10,
+        "isLiked": false,
+        "cocktailPhoto": "defaultCocktail.png",
+        "mainCompName": "Tequila",
+        "cocktailName": "Tequila Sunrise"
+    }
+]
