@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/coctails-list.css";
 
 export default function UserCard() {
   return (
