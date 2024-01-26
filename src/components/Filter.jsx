@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/filter.css";
 
 export default function Filter() {
+  let isFiltred = false;
+
   return (
     <div id="filter">
       <div id="search">
@@ -11,14 +13,16 @@ export default function Filter() {
           name=""
           id=""
         />
-        <img id="search_icon" src="searchIcon.svg"/>
+        <img id="search_icon" src="searchIcon.svg" />
       </div>
       <div id="buttons">
         <div id="filter_buttons">
-          <a id="clear_filter" href="">
-            Clear filter
-            <img src="clearFilter.svg" alt="" />
-          </a>
+          {isFiltred && (
+            <a id="clear_filter" href="">
+              Clear filter
+              <img src="clearFilter.svg" alt="" />
+            </a>
+          )}
           <a id="filter_button" href="">
             <img src="filterIcon.svg" alt="" />
             Filter
