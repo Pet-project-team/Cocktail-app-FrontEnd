@@ -40,10 +40,10 @@ export default function UserCard() {
         </button>
       </div>
       {signUpDisplay && (
-        <SignUp
-          onCloseFormClick={() => onCloseFormClick()}
-          signUpDisplay={signUpDisplay}
-        />
+        <>
+          <button id="closeForm" onClick={() => onCloseFormClick()}></button>
+          <SignUp />
+        </>
       )}
     </div>
   );

@@ -55,6 +55,7 @@
   height: 27px;
   margin: auto;
 
+  border-bottom: 2px solid #ffffff;
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
   font-family: Roboto;
@@ -74,7 +75,7 @@
 }
 
 .highlightedBtn {
-  border-bottom: 2px solid #0a64ff;
+  border-bottom: 2px solid #0a64ff!important;
   color: #0a64ff !important;
 }
 
