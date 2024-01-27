@@ -49,8 +49,8 @@ export default function SignUp() {
       </div>
       <p id="welcomeMsg">
         {formRoute
-          ? "Welcome back! Wanna get high tonight?"
-          : "Sign up to continue with full access!"}
+          ? "Sign up to continue with full access!"
+          : "Welcome back! Wanna get high tonight?"}
       </p>
       <button id="google" type="button">
         <img src="GoogleLogo.svg" alt="" />
@@ -63,7 +63,13 @@ export default function SignUp() {
       </div>
       {formRoute && (
         <div className="inputContainer">
-          <input type="text" id="nickname" name="nickname" placeholder=" " required />
+          <input
+            type="text"
+            id="nickname"
+            name="nickname"
+            placeholder=" "
+            required
+          />
           <label htmlFor="nickname">Your nickname</label>
         </div>
       )}
@@ -72,11 +78,17 @@ export default function SignUp() {
         <label htmlFor="email">Email</label>
       </div>
       <div className="inputContainer">
-        <input type="password" id="password" name="password" placeholder=" " required />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder=" "
+          required
+        />
         <label htmlFor="password">Password</label>
       </div>
       <button id="submitBtn" type="submit">
-        <p>{formRoute ? "Create account" : "Sign up"}</p>
+        <p>{formRoute ? "Create account" : "Log in"}</p>
         <img
           id="submitIcon"
           src={formRoute ? "personAdd.svg" : "signUp.svg"}
