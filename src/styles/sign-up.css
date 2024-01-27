@@ -75,7 +75,7 @@
 }
 
 .highlightedBtn {
-  border-bottom: 2px solid #0a64ff!important;
+  border-bottom: 2px solid #0a64ff !important;
   color: #0a64ff !important;
 }
 
@@ -194,7 +194,8 @@ label {
 }
 
 input:focus ~ label,
-input:valid ~ label {
+input:valid ~ label,
+input:not(:placeholder-shown) ~ label {
   top: 0;
   left: 10px;
   font-size: 12px;

@@ -63,16 +63,16 @@ export default function SignUp() {
       </div>
       {formRoute && (
         <div className="inputContainer">
-          <input type="text" id="nickname" name="nickname" required />
+          <input type="text" id="nickname" name="nickname" placeholder=" " required />
           <label htmlFor="nickname">Your nickname</label>
         </div>
       )}
       <div className="inputContainer">
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder=" " required />
         <label htmlFor="email">Email</label>
       </div>
       <div className="inputContainer">
-        <input type="password" id="password" name="password" required />
+        <input type="password" id="password" name="password" placeholder=" " required />
         <label htmlFor="password">Password</label>
       </div>
       <button id="submitBtn" type="submit">
