@@ -3,20 +3,13 @@ import { useState } from "react";
 import SignUp from "./SignUp";
 import "../styles/coctails-list.css";
 
-export default function UserCard() {
-  const [signUpDisplay, setSignUpDisplay] = useState(false);
-
-  let isLoggedIng = false;
-
-  function onSignUpClick() {
-    setSignUpDisplay(true);
-  }
-
-  function onCloseFormClick() {
-    setSignUpDisplay(false);
-  }
-
-  return isLoggedIng ? (
+export default function UserCard({
+  signUpDisplay,
+  isLoggedIn,
+  onSignUpClick,
+  onCloseFormClick,
+}) {
+  return isLoggedIn ? (
     <div id="user">
       <a href="">
         <img id="avatar" src="avatarDefault.png" alt="" />
@@ -41,7 +34,6 @@ export default function UserCard() {
       </div>
       {signUpDisplay && (
         <>
-          <button id="closeForm" onClick={() => onCloseFormClick()}></button>
           <SignUp />
         </>
       )}
