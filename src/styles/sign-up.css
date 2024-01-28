@@ -171,7 +171,7 @@ label {
   position: absolute;
   top: 50%;
   left: 10px;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgba(0, 0, 0, 0.5);
 
   background: linear-gradient(
     180deg,
@@ -199,6 +199,30 @@ input:not(:placeholder-shown) ~ label {
   top: 0;
   left: 10px;
   font-size: 12px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.clear-btn {
+  all: unset;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+
+  cursor: pointer;
+}
+
+.clear-btn img {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #submitBtn {

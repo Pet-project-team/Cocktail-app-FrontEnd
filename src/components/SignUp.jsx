@@ -82,6 +82,17 @@ export default function SignUp({
             required
           />
           <label htmlFor="nickname">Your nickname</label>
+          {enteredName.length > 0 && (
+            <button
+              className="clear-btn"
+              type="button"
+              onClick={() => {
+                setEnteredName("");
+              }}
+            >
+              <img src="clearInput.svg" alt="" />
+            </button>
+          )}
         </div>
       )}
       <div className="inputContainer">
@@ -97,6 +108,17 @@ export default function SignUp({
           }}
         />
         <label htmlFor="email">Email</label>
+        {enteredEmail.length > 0 && (
+          <button
+            className="clear-btn"
+            type="button"
+            onClick={() => {
+              setEnteredEmail("");
+            }}
+          >
+            <img src="clearInput.svg" alt="" />
+          </button>
+        )}
       </div>
       <div className="inputContainer">
         <input
@@ -111,6 +133,17 @@ export default function SignUp({
           required
         />
         <label htmlFor="password">Password</label>
+        {enteredPassword.length > 0 && (
+          <button
+            className="clear-btn"
+            type="button"
+            onClick={() => {
+              setEnteredPassword("");
+            }}
+          >
+            <img src="clearInput.svg" alt="" />
+          </button>
+        )}
       </div>
       <button id="submitBtn" type="submit">
         <p>{formRoute ? "Create account" : "Log in"}</p>
