@@ -22,18 +22,18 @@ export default function SignUp({
 
   return (
     <form
-      id="signUpWindow"
+      id="sign-up-window"
       action={formRoute ? "/register" : "/login"}
       method="POST"
     >
-      <div id="chooseBtns">
+      <div id="choose-btns">
         <button
-          className="chooseBtn"
+          className="choose-btn"
           id="logIn"
           type="button"
           onClick={() => onClickLoginBtn()}
         >
-          <p className={formRoute ? "" : "highlightedBtn"}>Log in</p>
+          <p className={formRoute ? "" : "highlighted-btn"}>Log in</p>
         </button>
         <svg
           id="line"
@@ -46,15 +46,15 @@ export default function SignUp({
           <path d="M1 0V27" stroke="black" strokeOpacity="0.85" />
         </svg>
         <button
-          className="chooseBtn"
+          className="choose-btn"
           id="register"
           type="button"
           onClick={() => onClickRegisterBtn()}
         >
-          <p className={formRoute ? "highlightedBtn" : ""}>Register</p>
+          <p className={formRoute ? "highlighted-btn" : ""}>Register</p>
         </button>
       </div>
-      <p id="welcomeMsg">
+      <p id="welcome-msg">
         {formRoute
           ? "Sign up to continue with full access!"
           : "Welcome back! Wanna get high tonight?"}
@@ -64,12 +64,12 @@ export default function SignUp({
         <p>Sign up with Google</p>
       </button>
       <div id="hr">
-        <div className="hrLine"></div>
-        <p id="hrOR">OR</p>
-        <div className="hrLine"></div>
+        <div className="hr__line"></div>
+        <p id="hr__text">OR</p>
+        <div className="hr__line"></div>
       </div>
       {formRoute && (
-        <div className="inputContainer">
+        <div className="input-container">
           <input
             type="text"
             id="nickname"
@@ -95,7 +95,7 @@ export default function SignUp({
           )}
         </div>
       )}
-      <div className="inputContainer">
+      <div className="input-container">
         <input
           type="email"
           id="email"
@@ -120,7 +120,7 @@ export default function SignUp({
           </button>
         )}
       </div>
-      <div className="inputContainer">
+      <div className="input-container">
         <input
           type="password"
           id="password"
@@ -145,10 +145,10 @@ export default function SignUp({
           </button>
         )}
       </div>
-      <button id="submitBtn" type="submit">
+      <button id="submit-btn" type="submit">
         <p>{formRoute ? "Create account" : "Log in"}</p>
         <img
-          id="submitIcon"
+          id="submit-icon"
           src={formRoute ? "personAdd.svg" : "signUp.svg"}
           alt=""
         />

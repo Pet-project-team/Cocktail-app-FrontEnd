@@ -62,7 +62,7 @@ nav a:hover {
   color: rgb(10, 100, 255);
 }
 
-#sign_up_button_container {
+#sign-up-button-container {
   display: flex;
   width: 150px;
   flex-direction: column;
@@ -70,7 +70,7 @@ nav a:hover {
   align-items: flex-end;
 }
 
-#sign_up {
+#sign-up {
   all: unset;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -93,7 +93,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-#sign_up:hover {
+#sign-up:hover {
   background: hsl(218, 100%, 45%);
 }
 

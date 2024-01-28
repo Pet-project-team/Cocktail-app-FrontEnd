@@ -30,7 +30,7 @@
   background: #fff;
 }
 
-#search_button {
+#search-button {
   all: unset;
   cursor: pointer;
   height: 30px;
@@ -38,23 +38,23 @@
   right: 0;
 }
 
-#search_icon {
+#search-icon {
   width: 30px;
   border-left: 1px solid #d9d9d9;
 }
 
-input:focus-visible ~ #search_button #search_icon {
+input:focus-visible ~ #search-button #search-icon {
   border-left: 2px solid #000000;
 }
 
-#filter_buttons,
+#filter-buttons,
 #buttons {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-#clear_filter {
+#clear-filter {
   all: unset;
   cursor: pointer;
 
@@ -69,7 +69,7 @@ input:focus-visible ~ #search_button #search_icon {
   font-size: 16px;
 }
 
-#filter_button {
+#filter-button {
   display: flex;
   height: 30px;
   padding: 0px 10px 0px 5px;
@@ -90,11 +90,11 @@ input:focus-visible ~ #search_button #search_icon {
   cursor: pointer;
 }
 
-#filter_button:hover {
+#filter-button:hover {
   background: hsl(0, 0%, 95%);
 }
 
-#addNew {
+#add-new {
   all: unset;
   cursor: pointer;
 
@@ -118,6 +118,6 @@ input:focus-visible ~ #search_button #search_icon {
   -o-transition: 0.3s;
 }
 
-#addNew:hover {
+#add-new:hover {
   background: hsl(218, 100%, 45%);
 }

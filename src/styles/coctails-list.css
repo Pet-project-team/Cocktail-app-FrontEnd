@@ -1,4 +1,4 @@
-#Cocktails {
+#cocktails {
   padding: 0;
   list-style: none;
 
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 
-.cocktailCard {
+.cocktail-card {
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -26,7 +26,7 @@
   box-shadow: 0px 2px 8px 0px #e7e7e7;
 }
 
-.likeBtn {
+.like-btn {
   all: unset;
 
   position: absolute;
@@ -36,13 +36,13 @@
   cursor: pointer;
 }
 
-.cocktailCardPhoto {
+.card__photo {
   width: 170px;
   height: 242px;
   flex-shrink: 0;
 }
 
-.cardInfo {
+.card__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -51,7 +51,7 @@
   gap: 10px;
 }
 
-.mainComponentName {
+.main-component-name {
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
   font-family: Roboto;
@@ -61,7 +61,7 @@
   line-height: 22px; /* 137.5% */
 }
 
-.cocktailName {
+.cocktail-name {
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
   font-family: Roboto;

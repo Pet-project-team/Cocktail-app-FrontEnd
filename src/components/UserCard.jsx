@@ -24,10 +24,11 @@ export default function UserCard({
       </a>
     </div>
   ) : (
-    <div id="sign_up_container">
-      <div id="sign_up_button_container">
+    <div id="sign-up-container">
+      <div id="sign-up-button-container">
         <button
-          id="sign_up"
+          id="sign-up"
+          type="button"
           onClick={
             signUpDisplay ? () => onCloseFormClick() : () => onSignUpClick()
           }

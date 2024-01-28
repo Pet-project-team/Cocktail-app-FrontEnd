@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <>
       {signUpDisplay && (
-        <button id="closeForm" onClick={() => onCloseFormClick()}></button>
+        <button id="close-form" onClick={() => onCloseFormClick()}></button>
       )}
       <header>
         <a href="/">

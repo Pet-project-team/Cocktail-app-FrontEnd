@@ -1,4 +1,4 @@
-#closeForm {
+#close-form {
   all: unset;
   z-index: 999;
   position: absolute;
@@ -8,7 +8,7 @@
   height: calc(100vh - 64px);
 }
 
-#signUpWindow {
+#sign-up-window {
   position: absolute;
   z-index: 1000;
   top: 79px;
@@ -26,11 +26,11 @@
   box-shadow: 0px 2px 8px 0px #e7e7e7;
 }
 
-#signUpWindow p {
+#sign-up-window p {
   margin: auto;
 }
 
-#chooseBtns {
+#choose-btns {
   display: flex;
   padding: 10px;
   align-items: center;
@@ -38,7 +38,7 @@
   align-self: stretch;
 }
 
-.chooseBtn {
+.choose-btn {
   all: unset;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   flex: 1 0 0;
 }
 
-.chooseBtn p {
+.choose-btn p {
   flex: 1 0 0;
   align-self: stretch;
 
@@ -74,12 +74,12 @@
   stroke: rgba(0, 0, 0, 0.85);
 }
 
-.highlightedBtn {
+.highlighted-btn {
   border-bottom: 2px solid #0a64ff !important;
   color: #0a64ff !important;
 }
 
-#welcomeMsg {
+#welcome-msg {
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
   font-family: Roboto;
@@ -134,13 +134,13 @@
   align-self: stretch;
 }
 
-.hrLine {
+.hr__line {
   width: 161px;
   height: 2px;
   background-color: hsl(0, 0%, 75%);
 }
 
-#hrOR {
+#hr__text {
   margin: auto;
   color: rgba(0, 0, 0, 0.25);
 
@@ -152,7 +152,7 @@
   line-height: 22px; /* 157.143% */
 }
 
-.inputContainer {
+.input-container {
   position: relative;
   width: 100%;
 }
@@ -225,7 +225,7 @@ input:not(:placeholder-shown) ~ label {
   left: 0;
 }
 
-#submitBtn {
+#submit-btn {
   all: unset;
   display: flex;
   height: 30px;
@@ -246,11 +246,11 @@ input:not(:placeholder-shown) ~ label {
   -o-transition: 0.3s;
 }
 
-#submitBtn:hover {
+#submit-btn:hover {
   background: hsl(218, 100%, 45%);
 }
 
-#submitBtn p {
+#submit-btn p {
   margin: 0;
   color: #fff;
   text-align: center;
@@ -261,7 +261,7 @@ input:not(:placeholder-shown) ~ label {
   line-height: 150%; /* 24px */
 }
 
-#submitIcon {
+#submit-icon {
   width: 24px;
   height: 24px;
 }
