@@ -9,6 +9,10 @@ export default function UserCard({
   onSignUpClick,
   onCloseFormClick,
 }) {
+  const [enteredName, setEnteredName] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+
   return isLoggedIn ? (
     <div id="user">
       <a href="">
@@ -34,7 +38,14 @@ export default function UserCard({
       </div>
       {signUpDisplay && (
         <>
-          <SignUp />
+          <SignUp
+            enteredName={enteredName}
+            setEnteredName={setEnteredName}
+            enteredEmail={enteredEmail}
+            setEnteredEmail={setEnteredEmail}
+            enteredPassword={enteredPassword}
+            setEnteredPassword={setEnteredPassword}
+          />
         </>
       )}
     </div>

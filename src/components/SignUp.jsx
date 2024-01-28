@@ -2,7 +2,14 @@ import React from "react";
 import { useState } from "react";
 import "../styles/sign-up.css";
 
-export default function SignUp() {
+export default function SignUp({
+  enteredName,
+  setEnteredName,
+  enteredEmail,
+  setEnteredEmail,
+  enteredPassword,
+  setEnteredPassword,
+}) {
   const [formRoute, setFormRoute] = useState(false);
 
   function onClickLoginBtn() {
@@ -68,13 +75,27 @@ export default function SignUp() {
             id="nickname"
             name="nickname"
             placeholder=" "
+            value={enteredName}
+            onChange={(e) => {
+              setEnteredName(e.target.value);
+            }}
             required
           />
           <label htmlFor="nickname">Your nickname</label>
         </div>
       )}
       <div className="inputContainer">
-        <input type="email" id="email" name="email" placeholder=" " required />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder=" "
+          required
+          value={enteredEmail}
+          onChange={(e) => {
+            setEnteredEmail(e.target.value);
+          }}
+        />
         <label htmlFor="email">Email</label>
       </div>
       <div className="inputContainer">
@@ -83,6 +104,10 @@ export default function SignUp() {
           id="password"
           name="password"
           placeholder=" "
+          value={enteredPassword}
+          onChange={(e) => {
+            setEnteredPassword(e.target.value);
+          }}
           required
         />
         <label htmlFor="password">Password</label>
