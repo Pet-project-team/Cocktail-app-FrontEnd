@@ -1,72 +1,102 @@
 [
     {
         "id": 1,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Gin",
-        "cocktailName": "Gin & Tonic"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Gin",
+            "cocktailName": "Gin & Tonic"
+        },
+        "pageInfo": {
+            "cocktailName": "Gin & Tonic",
+            "photos": [
+                "/gin-tonic1.png",
+                "/gin-tonic2.png",
+                "/gin-tonic3.png",
+                "/gin-tonic4.png"
+            ],
+            "cocktailDescription": "The herbaceous, juniper-forward flavor of botanical London Dry Gin is perfectly carried by tonic water's sweetness."
+        }
     },
     {
         "id": 2,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Vodka",
-        "cocktailName": "Vodka Martini"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Vodka",
+            "cocktailName": "Vodka Martini"
+        }
     },
     {
         "id": 3,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Rum",
-        "cocktailName": "Mai Tai"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Rum",
+            "cocktailName": "Mai Tai"
+        }
     },
     {
         "id": 4,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Tequila",
-        "cocktailName": "Margarita"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Tequila",
+            "cocktailName": "Margarita"
+        }
     },
     {
         "id": 5,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Whiskey",
-        "cocktailName": "Old Fashioned"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Whiskey",
+            "cocktailName": "Old Fashioned"
+        }
     },
     {
         "id": 6,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Rum",
-        "cocktailName": "Piña Colada"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Rum",
+            "cocktailName": "Piña Colada"
+        }
     },
     {
         "id": 7,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Gin",
-        "cocktailName": "Negroni"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Gin",
+            "cocktailName": "Negroni"
+        }
     },
     {
         "id": 8,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Vodka",
-        "cocktailName": "Cosmopolitan"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Vodka",
+            "cocktailName": "Cosmopolitan"
+        }
     },
     {
         "id": 9,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Whiskey",
-        "cocktailName": "Whiskey Sour"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Whiskey",
+            "cocktailName": "Whiskey Sour"
+        }
     },
     {
         "id": 10,
-        "isLiked": false,
-        "cocktailPhoto": "defaultCocktail.png",
-        "mainCompName": "Tequila",
-        "cocktailName": "Tequila Sunrise"
+        "cardInfo": {
+            "isLiked": false,
+            "cocktailPhoto": "defaultCocktail.png",
+            "mainCompName": "Tequila",
+            "cocktailName": "Tequila Sunrise"
+        }
     }
 ]

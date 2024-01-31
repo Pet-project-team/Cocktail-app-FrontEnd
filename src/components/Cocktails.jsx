@@ -6,7 +6,7 @@ export default function Cocktails() {
   return (
     <ul id="cocktails">
       {coctailsList.map((card) => (
-        <CocktailCard key={card.id} cardInfo = {card} />
+        <CocktailCard key={card.id} id={card.id} cardInfo={card.cardInfo} />
       ))}
     </ul>
   );
