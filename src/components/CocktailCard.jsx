@@ -2,8 +2,8 @@ import React from "react";
 
 export default function CocktailCard({ cardInfo }) {
   return (
-    <li className="cocktailCard">
-      <button className="likeBtn" href="">
+    <li className="cocktail-card">
+      <button className="like-btn" href="">
         <svg
           width="24"
           height="24"
@@ -20,13 +20,13 @@ export default function CocktailCard({ cardInfo }) {
         </svg>
       </button>
       <a href="">
-        <img src={cardInfo.cocktailPhoto} className="cocktailCardPhoto"></img>
+        <img src={cardInfo.cocktailPhoto} className="card__photo"></img>
       </a>
-      <div className="cardInfo">
-        <a className="mainComponentName" href="">
+      <div className="card__info">
+        <a className="main-component-name" href="">
           {cardInfo.mainCompName}
         </a>
-        <a className="cocktailName" href="">
+        <a className="cocktail-name" href="">
           {cardInfo.cocktailName}
         </a>
       </div>

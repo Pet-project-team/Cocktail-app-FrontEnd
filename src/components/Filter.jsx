@@ -13,24 +13,24 @@ export default function Filter() {
           name=""
           id=""
         />
-        <button id="search_button">
-          <img id="search_icon" src="searchIcon.svg" />
+        <button id="search-button">
+          <img id="search-icon" src="searchIcon.svg" />
         </button>
       </div>
       <div id="buttons">
-        <div id="filter_buttons">
+        <div id="filter-buttons">
           {isFiltred && (
-            <button id="clear_filter">
+            <button id="clear-filter">
               Clear filter
               <img src="clearFilter.svg" alt="" />
             </button>
           )}
-          <button id="filter_button">
+          <button id="filter-button">
             <img src="filterIcon.svg" alt="" />
             Filter
           </button>
         </div>
-        <button id="addNew" href="">
+        <button id="add-new" href="">
           <img src="addNew.svg" alt="" />
           Add new
         </button>

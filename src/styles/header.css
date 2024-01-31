@@ -1,4 +1,5 @@
 header {
+  position: relative;
   background-color: white;
   display: flex;
   width: 1440px;
@@ -20,7 +21,7 @@ a {
 }
 
 #logo {
-  width: 150px;
+  width: 200px;
   height: 32px;
 }
 
@@ -61,44 +62,13 @@ nav a:hover {
   color: rgb(10, 100, 255);
 }
 
-#sign_up_container {
-  display: flex;
-  width: 150px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-#sign_up {
-  all: unset;
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  height: 30px;
-  padding: 0px 5px 0px 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
-  line-height: 22px;
-  /*110%*/
-  color: rgb(255, 255, 255);
-  border-radius: 5px;
-  background: hsl(218, 100%, 52%);
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  cursor: pointer;
-}
-
-#sign_up:hover {
-  background: hsl(218, 100%, 45%);
+#sign-up-container{
+  width: 200px;
 }
 
 #user {
   display: flex;
-  width: 150px;
+  width: 200px;
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
@@ -121,4 +91,41 @@ nav a:hover {
   font-size: 14px;
   line-height: 22px; /* 157.143% */
   align-items: flex-start;
+}
+
+#google {
+  all: unset;
+  display: flex;
+  height: 30px;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+
+  border-radius: 5px;
+  border: 1px solid #4285f4;
+  background: #fff;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+#google:hover {
+  border: 1px solid rgb(25, 72, 146);
+}
+
+#google p {
+  color: #4285f4;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  margin: 0;
 }

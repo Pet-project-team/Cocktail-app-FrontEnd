@@ -3,6 +3,8 @@ import UserCard from "./UserCard";
 import "../styles/header.css";
 
 export default function Header() {
+  let isLoggedIn = false;
+
   return (
     <header>
       <a href="/">
@@ -12,23 +14,23 @@ export default function Header() {
       </a>
       <nav>
         <ul>
-          <li class="nav_el">
-            <a class="highlighted" href="">
+          <li className="nav_el">
+            <a className="highlighted" href="">
               Featured Cocktails
             </a>
           </li>
-          <li class="nav_el">
+          <li className="nav_el">
             <a href="">Cocktail Constructor</a>
           </li>
-          <li class="nav_el">
+          <li className="nav_el">
             <a href="">Featured</a>
           </li>
-          <li class="nav_el">
+          <li className="nav_el">
             <a href="">About project</a>
           </li>
         </ul>
       </nav>
-      <UserCard />
+      <UserCard isLoggedIn={isLoggedIn} />
     </header>
   );
 }

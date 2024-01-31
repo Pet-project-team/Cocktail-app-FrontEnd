@@ -4,7 +4,7 @@ import coctailsList from "../cocktails.json";
 
 export default function Cocktails() {
   return (
-    <ul id="Cocktails">
+    <ul id="cocktails">
       {coctailsList.map((card) => (
         <CocktailCard key={card.id} cardInfo = {card} />
       ))}

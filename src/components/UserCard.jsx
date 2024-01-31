@@ -1,10 +1,13 @@
 import React from "react";
 import "../styles/coctails-list.css";
 
-export default function UserCard() {
-  let isLoggedIng = false;
-
-  return isLoggedIng ? (
+export default function UserCard({
+  signUpDisplay,
+  isLoggedIn,
+  onSignUpClick,
+  onCloseFormClick,
+}) {
+  return isLoggedIn ? (
     <div id="user">
       <a href="">
         <img id="avatar" src="avatarDefault.png" alt="" />
@@ -15,10 +18,10 @@ export default function UserCard() {
       </a>
     </div>
   ) : (
-    <div id="sign_up_container">
-      <button id="sign_up" href="">
-        Sign up
-        <img src="signUp.svg" alt="" />
+    <div id="sign-up-container">
+      <button id="google" type="button">
+        <img src="GoogleLogo.svg" alt="" />
+        <p>Sign up with Google</p>
       </button>
     </div>
   );
