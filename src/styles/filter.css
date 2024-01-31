@@ -121,3 +121,8 @@ input:focus-visible ~ #search-button #search-icon {
 #add-new:hover {
   background: hsl(218, 100%, 45%);
 }
+
+#add-new img{
+  width: 11px;
+  height: 12px;
+}

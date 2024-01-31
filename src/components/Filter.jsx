@@ -31,7 +31,7 @@ export default function Filter() {
           </button>
         </div>
         <button id="add-new" href="">
-          <img src="add-new.svg" alt="" />
+          <img src="addNew.svg" alt="" />
           Add new
         </button>
       </div>
