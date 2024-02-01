@@ -18,19 +18,20 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 433px;
+  width: clamp(300px, 25%, 433px);
 }
 
+.image-gallery,
 .image-gallery-slides,
 .image-gallery-swipe,
 .image-gallery-slide-wrapper,
 .image-gallery-content {
-  width: 433px;
+  width: 100%;
 }
 
 .image-gallery-image {
-  width: 433px;
-  max-height: none;
+  width: 100%;
+  max-height: none !important;
   aspect-ratio: 3/4;
   object-fit: cover !important;
   border-radius: 20px;
@@ -39,8 +40,11 @@
 .image-gallery-thumbnails-container {
   display: flex;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
   border: none;
+
+  width: 100%;
+  max-width: 433px;
 
   transform: translate3d(0px, 0px, 0px) !important;
   -webkit-transform: translate3d(0px, 0px, 0px) !important;
@@ -97,11 +101,12 @@
   border: none;
   cursor: pointer;
   margin: 0 !important;
+  min-width: calc((85.75 / 433) * 100%);
 }
 
 .image-gallery-thumbnail-image {
-  width: 85.75px !important;
-  height: 85.75px !important;
+  width: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
   margin-bottom: 5px;
 
@@ -125,7 +130,7 @@ h1 {
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
   font-family: Roboto;
-  font-size: 34px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 51px */
@@ -136,7 +141,7 @@ h1 {
 p {
   color: rgba(0, 0, 0, 0.85);
   font-family: Roboto;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
@@ -158,4 +163,75 @@ p {
 #share-links button {
   all: unset;
   height: 25px;
+}
+
+#cocktail-secondary-info {
+  width: 100%;
+}
+
+#navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#cocktail-secondary-info nav {
+  height: 36px;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-info-button {
+  all: unset;
+  height: 36px;
+  display: flex;
+
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.nav-info-button p {
+  padding: 0 0 12px 0;
+  border-bottom: 2px solid #00000000;
+
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.nav-info-button p:hover,
+.highlighted-cocktail-page-btn p {
+  color: rgb(10, 100, 255);
+}
+
+.highlighted-cocktail-page-btn p {
+  border-bottom: 2px solid #1890ff;
+}
+
+#measurement {
+  display: flex;
+  gap: 30px;
+}
+
+#measurement-title {
+  height: 36px;
+  padding: 0 0 12px 0;
+  margin: 0;
+}
+
+#cocktail-secondary-info__content h1 {
+  font-size: 24px;
+  text-align: start;
+  margin-bottom: 10px;
+}
+
+th img {
+  width: 100px;
+  aspect-ratio: 5/6;
+  object-fit: cover;
 }

@@ -15,7 +15,29 @@
                 "/gin-tonic3.png",
                 "/gin-tonic4.png"
             ],
-            "cocktailDescription": "The herbaceous, juniper-forward flavor of botanical London Dry Gin is perfectly carried by tonic water's sweetness."
+            "cocktailDescription": "The herbaceous, juniper-forward flavor of botanical London Dry Gin is perfectly carried by tonic water's sweetness.",
+            "ingredients": [
+                {
+                    "ingredienId": 1,
+                    "number": "100g",
+                    "haveLink": false
+                },
+                {
+                    "ingredienId": 2,
+                    "numberOZ": 0.5,
+                    "haveLink": true
+                },
+                {
+                    "ingredienId": 3,
+                    "numberOZ": 4,
+                    "haveLink": true
+                },
+                {
+                    "ingredienId": 4,
+                    "number": "2 or 3 wedges, for garnish",
+                    "haveLink": false
+                }
+            ]
         }
     },
     {
