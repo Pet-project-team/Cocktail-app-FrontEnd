@@ -1,6 +1,7 @@
 import React from "react";
 import UserCard from "./UserCard";
 import "../styles/header.css";
+import {GoogleLogin} from '@react-oauth/google';
 
 export default function Header() {
   let isLoggedIn = false;
@@ -30,7 +31,15 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <UserCard isLoggedIn={isLoggedIn} />
+      {/* <UserCard isLoggedIn={isLoggedIn} /> */}
+      <GoogleLogin
+        onSuccess={credentialResponse => {
+          console.log(credentialResponse);
+        }}
+        onError={() => {
+          console.log('Login Failed');
+        }}
+      />
     </header>
   );
 }
