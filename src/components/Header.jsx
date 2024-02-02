@@ -16,16 +16,18 @@ export default function Header() {
       <nav>
         <ul>
           <li className="nav_el">
-            <Link to="/">Featured Cocktails</Link>
+            <Link to="/">Featured cocktails</Link>
           </li>
           <li className="nav_el">
-            <Link to="/constructor">Cocktail Constructor</Link>
+            <Link to="/constructor">Constructor</Link>
           </li>
           <li className="nav_el">
-            <Link to="/featured">Featured</Link>
+            <Link to={"/cocktails/" + Math.floor(Math.random() * 10)}>
+              Random cocktail
+            </Link>
           </li>
           <li className="nav_el">
-            <Link to="/about">About project</Link>
+            <Link to="/about">About us</Link>
           </li>
         </ul>
       </nav>

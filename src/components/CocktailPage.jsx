@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import "../styles/coctail-page.css";
 import coctailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
@@ -16,12 +17,26 @@ export default function CocktailPage() {
 
   const [tab, setTab] = useState(1);
   const [measurement, setMeasurement] = useState(1);
+  const currentID = parseInt(params.id);
 
   return (
     <>
-      <div id="top-buttons">
-        <button></button>
-        <button></button>
+      <div id="top-links">
+        {currentID - 1 === 0 ? (
+          <Link to="/">
+            <img src="/previous-icon.svg"></img>
+            On main page
+          </Link>
+        ) : (
+          <Link to={"/cocktails/" + (currentID - 1)}>
+            <img src="/previous-icon.svg"></img>
+            Previous cocktail
+          </Link>
+        )}
+        <Link to={"/cocktails/" + (currentID + 1)}>
+          Next cocktail
+          <img src="/next-icon.svg"></img>
+        </Link>
       </div>
       <div id="cocktail-page">
         <div id="cocktail-main-info">
@@ -99,39 +114,41 @@ export default function CocktailPage() {
                 <p>Video tutorial</p>
               </button>
             </nav>
-            <div id="measurement">
-              <p id="measurement-title">Measurement:</p>
-              <button
-                className={
-                  "nav-info-button" +
-                  " " +
-                  (measurement === 2
-                    ? "highlighted-cocktail-page-btn"
-                    : "unhighlighted-cocktail-page-btn")
-                }
-                type="button"
-                onClick={() => {
-                  setMeasurement(2);
-                }}
-              >
-                <p>ml</p>
-              </button>
-              <button
-                className={
-                  "nav-info-button" +
-                  " " +
-                  (measurement === 1
-                    ? "highlighted-cocktail-page-btn"
-                    : "unhighlighted-cocktail-page-btn")
-                }
-                type="button"
-                onClick={() => {
-                  setMeasurement(1);
-                }}
-              >
-                <p>oz</p>
-              </button>
-            </div>
+            {tab === 1 && (
+              <div id="measurement">
+                <p id="measurement-title">Measurement:</p>
+                <button
+                  className={
+                    "nav-info-button" +
+                    " " +
+                    (measurement === 2
+                      ? "highlighted-cocktail-page-btn"
+                      : "unhighlighted-cocktail-page-btn")
+                  }
+                  type="button"
+                  onClick={() => {
+                    setMeasurement(2);
+                  }}
+                >
+                  <p>ml</p>
+                </button>
+                <button
+                  className={
+                    "nav-info-button" +
+                    " " +
+                    (measurement === 1
+                      ? "highlighted-cocktail-page-btn"
+                      : "unhighlighted-cocktail-page-btn")
+                  }
+                  type="button"
+                  onClick={() => {
+                    setMeasurement(1);
+                  }}
+                >
+                  <p>oz</p>
+                </button>
+              </div>
+            )}
           </div>
           {tab === 1 && (
             <div id="ingredients-tab">
