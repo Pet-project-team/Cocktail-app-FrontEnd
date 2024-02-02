@@ -173,8 +173,21 @@ p {
 
 #share-links button {
   all: unset;
+  position: relative;
   height: 25px;
   cursor: pointer;
+}
+
+#share-links button span {
+  color: rgba(0, 0, 0, 0.85);
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 #cocktail-secondary-info {

@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import {
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+} from "react-share";
 import "../styles/coctail-page.css";
 import coctailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
@@ -17,7 +22,9 @@ export default function CocktailPage() {
 
   const [tab, setTab] = useState(1);
   const [measurement, setMeasurement] = useState(1);
+  const [isCopied, setIsCopied] = useState(false);
   const currentID = parseInt(params.id);
+  const currentURL = window.location.href;
 
   return (
     <>
@@ -54,14 +61,47 @@ export default function CocktailPage() {
           <p>{cocktailPageInfo.cocktailDescription}</p>
           <div id="share-links">
             <p>Share</p>
-            <button type="button">
+            <TwitterShareButton
+              title={
+                "An incredible recipe for " +
+                cocktailPageInfo.cocktailName +
+                " that will definitely turn out delicious!"
+              }
+              url={currentURL}
+            >
               <img src="/twitter.svg" alt="" />
-            </button>
-            <button type="button">
+            </TwitterShareButton>
+            <FacebookShareButton
+              title={
+                "An incredible recipe for " +
+                cocktailPageInfo.cocktailName +
+                " that will definitely turn out delicious!"
+              }
+              url={currentURL}
+            >
               <img src="/facebook.svg" alt="" />
-            </button>
-            <button type="button">
+            </FacebookShareButton>
+            <button
+              type="button"
+              onClick={() => {
+                navigator.clipboard
+                  .writeText(
+                    "An incredible recipe for " +
+                      cocktailPageInfo.cocktailName +
+                      " that will definitely turn out delicious!\n" +
+                      currentURL
+                  )
+                  .then(() => {
+                    // If successful, update the isCopied state value
+                    setIsCopied(true);
+                    setTimeout(() => {
+                      setIsCopied(false);
+                    }, 1500);
+                  });
+              }}
+            >
               <img src="/content_copy.svg" alt="" />
+              {isCopied && <span>Copied!</span>}
             </button>
           </div>
         </div>
