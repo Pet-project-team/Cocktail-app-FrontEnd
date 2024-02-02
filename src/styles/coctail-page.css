@@ -235,3 +235,7 @@ th img {
   aspect-ratio: 5/6;
   object-fit: cover;
 }
+
+#video-tab iframe{
+  aspect-ratio: 16/9;
+}

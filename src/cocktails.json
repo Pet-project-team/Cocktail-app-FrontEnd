@@ -37,7 +37,56 @@
                     "number": "2 or 3 wedges, for garnish",
                     "haveLink": false
                 }
-            ]
+            ],
+            "equipments": [
+                {
+                    "equipmentId": 1,
+                    "haveLink": false
+                },
+                {
+                    "equipmentId": 2,
+                    "haveLink": false
+                }
+            ],
+            "recipe": [
+                {
+                    "step": 1,
+                    "type": "p",
+                    "content": "Gather the ingredients."
+                },
+                {
+                    "type": "img",
+                    "url": "https://www.thespruceeats.com/thmb/PZ6sy5TymJ2z6U1vnZPx9SODp3Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gin-and-tonic-recipe-759300-step-01-df6c5d8578c94dc8b0412a962448a590.jpg"
+                },
+                {
+                    "step": 2,
+                    "type": "p",
+                    "content": "In a highball glass filled with ice cubes, pour the gin, then top with tonic."
+                },
+                {
+                    "type": "img",
+                    "url": "https://www.thespruceeats.com/thmb/FLI9hUQc9_YImpizVGMUqs9CfDU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gin-and-tonic-recipe-759300-step-02-ace6f952df7247a68addbfa37b7c3e13.jpg"
+                },
+                {
+                    "step": 3,
+                    "type": "p",
+                    "content": "Gently stir to combine, but not so much so that you lose carbonation."
+                },
+                {
+                    "type": "img",
+                    "url": "https://www.thespruceeats.com/thmb/oAtdy7U3RE_hlKiOT8uqYyz-9Mo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gin-and-tonic-recipe-759300-step-03-352de38ce68c4227aeda83893ab570a3.jpg"
+                },
+                {
+                    "step": 4,
+                    "type": "p",
+                    "content": "Garnish with a lime wedge or lime slices. Serve and enjoy."
+                },
+                {
+                    "type": "img",
+                    "url": "https://www.thespruceeats.com/thmb/V7MwdXBA6FG9GOMnhqXTNXGOsQw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/gin-and-tonic-recipe-759300-step-04-6d6fdf6831ac481984f98e3af37b22d6.jpg"
+                }
+            ],
+            "youtubeURL": "https://www.youtube.com/embed/gnD097i5gVk?si=UUp_VAdRwILWgvNb"
         }
     },
     {
