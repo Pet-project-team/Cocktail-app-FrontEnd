@@ -1,8 +1,9 @@
 import React from "react";
 import UserCard from "./UserCard";
 import "../styles/header.css";
+import {GoogleLogin} from '@react-oauth/google';
 
-export default function Header() {
+export default function Header({setCookie, getAccessToken}) {
   let isLoggedIn = false;
 
   return (
@@ -30,7 +31,17 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <UserCard isLoggedIn={isLoggedIn} />
+      {/* <UserCard isLoggedIn={isLoggedIn} /> */}
+      <GoogleLogin
+        onSuccess={credentialResponse => {
+          const tokens = getAccessToken(credentialResponse)
+          setCookie('session',tokens);
+          console.log(credentialResponse);
+        }}
+        onError={() => {
+          console.log('Login Failed');
+        }}
+      />
     </header>
   );
 }
