@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function CocktailCard({ cardInfo }) {
+export default function CocktailCard({ cardInfo, id }) {
   return (
-    <li className="cocktail-card">
-      <button className="like-btn" href="">
+    <Link to={"cocktails/" + id} className="cocktail-card">
+      <button className="like-btn">
         <svg
           width="24"
           height="24"
@@ -19,17 +20,13 @@ export default function CocktailCard({ cardInfo }) {
           />
         </svg>
       </button>
-      <a href="">
+      <div>
         <img src={cardInfo.cocktailPhoto} className="card__photo"></img>
-      </a>
-      <div className="card__info">
-        <a className="main-component-name" href="">
-          {cardInfo.mainCompName}
-        </a>
-        <a className="cocktail-name" href="">
-          {cardInfo.cocktailName}
-        </a>
       </div>
-    </li>
+      <div className="card__info">
+        <div className="main-component-name">{cardInfo.mainCompName}</div>
+        <div className="cocktail-name">{cardInfo.cocktailName}</div>
+      </div>
+    </Link>
   );
 }

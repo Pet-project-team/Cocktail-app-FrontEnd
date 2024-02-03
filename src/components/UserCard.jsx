@@ -20,7 +20,7 @@ export default function UserCard({
   ) : (
     <div id="sign-up-container">
       <button id="google" type="button">
-        <img src="GoogleLogo.svg" alt="" />
+        <img src="/GoogleLogo.svg" alt="" />
         <p>Sign up with Google</p>
       </button>
     </div>

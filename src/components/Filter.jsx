@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/filter.css";
 
 export default function Filter() {
-  let isFiltred = true;
+  let isFiltred = false;
 
   return (
     <div id="filter">

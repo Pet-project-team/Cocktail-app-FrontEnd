@@ -1,0 +1,20 @@
+{
+  "1": {
+    "name": "Ice",
+    "photo": "/ice.png"
+  },
+  "2": {
+    "name": "Gin",
+    "photo": "/gin.png",
+    "url": "https://rozetka.com.ua/ua/gordons_5000289020800/p4977867/"
+  },
+  "3": {
+    "name": "Indian tonic",
+    "photo": "/tonic.png",
+    "url": "https://rozetka.com.ua/ua/fentimans_5029396000116/p277013503/"
+  },
+  "4": {
+    "name": "Lime",
+    "photo": "/lime.png"
+  }
+}
