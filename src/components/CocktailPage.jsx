@@ -206,7 +206,7 @@ export default function CocktailPage() {
                   <tbody>
                     {cocktailPageInfo.ingredients.map((ingredient) => (
                       <tr>
-                        <th scope="col">
+                        <th id="image-cell" scope="col">
                           <img
                             src={ingredientsList[ingredient.ingredienId].photo}
                             alt={ingredientsList[ingredient.ingredienId].name}
@@ -229,16 +229,28 @@ export default function CocktailPage() {
                           )}
                         </th>
                         <th scope="col">
-                          <button type="button">Add to filter</button>
-                          {ingredient.haveLink && (
-                            <a
-                              href={ingredientsList[ingredient.ingredienId].url}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              Buy
-                            </a>
-                          )}
+                          <div className="btn-container">
+                            <button className="ingredient-btn" type="button">
+                              <img
+                                className="add-button__img"
+                                src="/addNew.svg"
+                              />
+                              Add to filter
+                            </button>
+                            {ingredient.haveLink && (
+                              <a
+                                className="ingredient-btn"
+                                href={
+                                  ingredientsList[ingredient.ingredienId].url
+                                }
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <img src="/cart.svg" />
+                                Marketplace
+                              </a>
+                            )}
+                          </div>
                         </th>
                       </tr>
                     ))}
@@ -257,7 +269,7 @@ export default function CocktailPage() {
                     <tbody>
                       {cocktailPageInfo.equipments.map((equipment) => (
                         <tr>
-                          <th scope="col">
+                          <th id="image-cell" scope="col">
                             <img
                               src={equipmentsList[equipment.equipmentId].photo}
                               alt={equipmentsList[equipment.equipmentId].name}
@@ -267,16 +279,27 @@ export default function CocktailPage() {
                             <p>{equipmentsList[equipment.equipmentId].name}</p>
                           </th>
                           <th scope="col">
-                            <button type="button">Add to filter</button>
-                            {equipment.haveLink && (
-                              <a
-                                href={equipmentsList[equipment.equipmentId].url}
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                Buy
-                              </a>
-                            )}
+                            <div className="btn-container">
+                              <button className="ingredient-btn" type="button">
+                                <img
+                                  className="add-button__img"
+                                  src="/addNew.svg"
+                                />
+                                Add to filter
+                              </button>
+                              {equipment.haveLink && (
+                                <a
+                                  className="ingredient-btn"
+                                  href={
+                                    equipmentsList[equipment.equipmentId].url
+                                  }
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  Marketplace
+                                </a>
+                              )}
+                            </div>
                           </th>
                         </tr>
                       ))}
@@ -288,6 +311,7 @@ export default function CocktailPage() {
           )}
           {tab === 2 && (
             <div id="recipe-tab">
+              <h1 id="recipe-title">Step by step</h1>
               {cocktailPageInfo.recipe.map((element) => (
                 <>
                   {element.type === "p" && (
