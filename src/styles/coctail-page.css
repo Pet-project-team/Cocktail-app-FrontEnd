@@ -71,7 +71,6 @@
   max-height: none !important;
   aspect-ratio: 3/4;
   object-fit: cover !important;
-  border-radius: 20px;
 }
 
 .image-gallery-thumbnails-container {
@@ -300,7 +299,7 @@ p {
 
 table {
   border-collapse: collapse;
-  min-width: 500px;
+  min-width: 100%;
 }
 
 #ingredients-table {
@@ -330,6 +329,9 @@ th:last-child {
   -moz-border-radius: 0 30px 30px 0;
   -ms-border-radius: 0 30px 30px 0;
   -o-border-radius: 0 30px 30px 0;
+
+  width: 195px;
+  padding: 25px;
 }
 
 tbody tr:nth-child(odd) {
@@ -381,22 +383,25 @@ th:first-child::after {
 
 .btn-container {
   display: flex;
-  width: 100%;
+  width: 145px;
   height: 100%;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   gap: 10px;
+  margin: auto;
 }
 
 .ingredient-btn {
   display: flex;
   height: 30px;
-  padding: 0px 10px 0px 10px;
-  justify-content: center;
+  width: 100%;
+  padding: 0px 10px 0px 8px;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   font-size: 16px;
   font-weight: 400;
+  text-wrap: nowrap;
 
   border-radius: 5px;
   border: 1px solid #d9d9d9;

@@ -22,7 +22,7 @@ export default function Header() {
             <Link to="/constructor">Constructor</Link>
           </li>
           <li className="nav_el">
-            <Link to={"/cocktails/" + Math.floor(Math.random() * 10)}>
+            <Link to={"/cocktails/" + (Math.floor(Math.random() * 9) + 1)}>
               Random cocktail
             </Link>
           </li>

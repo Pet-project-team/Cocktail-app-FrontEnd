@@ -1,36 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Main from "./components/Main";
-import Header from "./components/Header";
 import CocktailPage from "./components/CocktailPage";
 import reportWebVitals from "./reportWebVitals";
-import fetchDataAPI from "./components/fetchDataAPI";
-import "./App.css";
-
-const postData = JSON.stringify({
-  userId: 1,
-  sthElse: "dsakmndasokdmasokdmqdokqwmdokwq",
-  qwedfmokURL: "https://dsakmldsadmasod.daslkmpd",
-});
-
-console.log(fetchDataAPI("https://httpbin.org/post", "POST", {}, postData));
-
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Outlet />
-    </div>
-  );
-}
+import App from "./App";
 
 const router = createBrowserRouter([
   {
