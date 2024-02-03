@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CocktailCard({ cardInfo, id }) {
   return (
-    <li className="cocktail-card">
+    <Link to={"cocktails/" + id} className="cocktail-card">
       <button className="like-btn">
         <svg
           width="24"
@@ -20,17 +20,13 @@ export default function CocktailCard({ cardInfo, id }) {
           />
         </svg>
       </button>
-      <Link to={"cocktails/" + id}>
+      <div>
         <img src={cardInfo.cocktailPhoto} className="card__photo"></img>
-      </Link>
-      <div className="card__info">
-        <Link className="main-component-name" to={"cocktails/" + id}>
-          {cardInfo.mainCompName}
-        </Link>
-        <Link className="cocktail-name" to={"cocktails/" + id}>
-          {cardInfo.cocktailName}
-        </Link>
       </div>
-    </li>
+      <div className="card__info">
+        <div className="main-component-name">{cardInfo.mainCompName}</div>
+        <div className="cocktail-name">{cardInfo.cocktailName}</div>
+      </div>
+    </Link>
   );
 }

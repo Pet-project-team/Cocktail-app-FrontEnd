@@ -8,11 +8,11 @@ export default function Header() {
 
   return (
     <header>
-      <a href="/">
-        <div id="logo">
+      <div id="logo">
+        <a href="/">
           <img src="/logo.svg" alt="logo" height="32" />
-        </div>
-      </a>
+        </a>
+      </div>
       <nav>
         <ul>
           <li className="nav_el">
