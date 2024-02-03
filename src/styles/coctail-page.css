@@ -43,6 +43,7 @@
   gap: 30px;
   flex: 1 0 0;
   align-self: stretch;
+  margin-bottom: 40px;
 
   border-radius: 20px;
   background: #fff;
@@ -132,8 +133,7 @@
 .image-gallery-slide-wrapper,
 .image-gallery-swipe,
 .image-gallery-slides,
-.image-gallery-slide
-{
+.image-gallery-slide {
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -233,6 +233,7 @@ p {
 
 #cocktail-secondary-info {
   width: 70%;
+  height: min-content;
 }
 
 #navigation {
@@ -299,6 +300,10 @@ p {
 
 table {
   border-collapse: collapse;
+  min-width: 500px;
+}
+
+#ingredients-table {
   margin-bottom: 40px;
 }
 

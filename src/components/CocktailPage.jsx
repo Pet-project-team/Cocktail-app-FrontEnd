@@ -194,7 +194,7 @@ export default function CocktailPage() {
             <div id="ingredients-tab">
               <div id="cocktail-secondary-info__content">
                 <h1>Ingredients</h1>
-                <table>
+                <table id="ingredients-table">
                   <thead>
                     <tr>
                       <th scope="col"></th>
@@ -257,55 +257,51 @@ export default function CocktailPage() {
                   </tbody>
                 </table>
                 <h1>Equipment</h1>
-                <div id="equipments">
-                  <table>
-                    <thead>
+                <table id="equipments-table">
+                  <thead>
+                    <tr>
+                      <th scope="col"></th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Links</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {cocktailPageInfo.equipments.map((equipment) => (
                       <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Links</th>
+                        <th id="image-cell" scope="col">
+                          <img
+                            src={equipmentsList[equipment.equipmentId].photo}
+                            alt={equipmentsList[equipment.equipmentId].name}
+                          />
+                        </th>
+                        <th scope="col">
+                          <p>{equipmentsList[equipment.equipmentId].name}</p>
+                        </th>
+                        <th scope="col">
+                          <div className="btn-container">
+                            <button className="ingredient-btn" type="button">
+                              <img
+                                className="add-button__img"
+                                src="/addNew.svg"
+                              />
+                              Add to filter
+                            </button>
+                            {equipment.haveLink && (
+                              <a
+                                className="ingredient-btn"
+                                href={equipmentsList[equipment.equipmentId].url}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Marketplace
+                              </a>
+                            )}
+                          </div>
+                        </th>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {cocktailPageInfo.equipments.map((equipment) => (
-                        <tr>
-                          <th id="image-cell" scope="col">
-                            <img
-                              src={equipmentsList[equipment.equipmentId].photo}
-                              alt={equipmentsList[equipment.equipmentId].name}
-                            />
-                          </th>
-                          <th scope="col">
-                            <p>{equipmentsList[equipment.equipmentId].name}</p>
-                          </th>
-                          <th scope="col">
-                            <div className="btn-container">
-                              <button className="ingredient-btn" type="button">
-                                <img
-                                  className="add-button__img"
-                                  src="/addNew.svg"
-                                />
-                                Add to filter
-                              </button>
-                              {equipment.haveLink && (
-                                <a
-                                  className="ingredient-btn"
-                                  href={
-                                    equipmentsList[equipment.equipmentId].url
-                                  }
-                                  target="_blank"
-                                  rel="noreferrer"
-                                >
-                                  Marketplace
-                                </a>
-                              )}
-                            </div>
-                          </th>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
           )}
