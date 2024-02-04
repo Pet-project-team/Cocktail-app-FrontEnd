@@ -27,6 +27,7 @@
 
 .like-btn {
   all: unset;
+  box-sizing: border-box;
 
   position: absolute;
   right: 20px;

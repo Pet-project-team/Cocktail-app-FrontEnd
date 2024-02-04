@@ -32,6 +32,7 @@
 
 #search-button {
   all: unset;
+  box-sizing: border-box;
   cursor: pointer;
   height: 30px;
   position: absolute;
@@ -56,6 +57,7 @@ input:focus-visible ~ #search-button #search-icon {
 
 #clear-filter {
   all: unset;
+  box-sizing: border-box;
   cursor: pointer;
 
   font-family: "Roboto", sans-serif;
@@ -96,6 +98,7 @@ input:focus-visible ~ #search-button #search-icon {
 
 #add-new {
   all: unset;
+  box-sizing: border-box;
   cursor: pointer;
 
   font-family: "Roboto", sans-serif;

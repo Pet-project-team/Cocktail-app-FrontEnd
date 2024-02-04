@@ -1,4 +1,5 @@
 import React from "react";
+import SignUp from "./SignUp";
 import "../styles/coctails-list.css";
 
 export default function UserCard({
@@ -19,10 +20,23 @@ export default function UserCard({
     </div>
   ) : (
     <div id="sign-up-container">
-      <button id="google" type="button">
-        <img src="/GoogleLogo.svg" alt="" />
-        <p>Sign up with Google</p>
-      </button>
+      <div id="sign-up-button-container">
+        <button
+          id="sign-up"
+          type="button"
+          onClick={
+            signUpDisplay ? () => onCloseFormClick() : () => onSignUpClick()
+          }
+        >
+          {signUpDisplay ? "Close Form" : "Sign up"}
+          <img src={signUpDisplay ? "close.svg" : "signUp.svg"} alt="" />
+        </button>
+      </div>
+      {signUpDisplay && (
+        <>
+          <SignUp />
+        </>
+      )}
     </div>
   );
 }
