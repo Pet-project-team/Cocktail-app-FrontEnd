@@ -8,6 +8,9 @@ export default function Header() {
   let isLoggedIn = false;
 
   const [signUpDisplay, setSignUpDisplay] = useState(false);
+  const [randomRoute, setRandomRoute] = useState(
+    "/cocktails/" + (Math.floor(Math.random() * 9) + 1)
+  );
 
   function onSignUpClick() {
     setSignUpDisplay(true);
@@ -24,9 +27,9 @@ export default function Header() {
       )}
       <header>
         <div id="logo">
-          <a href="/">
+          <Link to="/">
             <img src="/logo.svg" alt="logo" height="32" />
-          </a>
+          </Link>
         </div>
         <nav>
           <ul>
@@ -37,7 +40,14 @@ export default function Header() {
               <Link to="/constructor">Constructor</Link>
             </li>
             <li className="nav_el">
-              <Link to={"/cocktails/" + (Math.floor(Math.random() * 9) + 1)}>
+              <Link
+                onClick={() => {
+                  setRandomRoute(
+                    "/cocktails/" + (Math.floor(Math.random() * 9) + 1)
+                  );
+                }}
+                to={randomRoute}
+              >
                 Random cocktail
               </Link>
             </li>
