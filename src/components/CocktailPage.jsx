@@ -2,19 +2,15 @@ import React, { useState } from "react";
 import ImageGallery from "react-image-gallery";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import {
-  FacebookShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-} from "react-share";
-import "../styles/coctail-page.css";
-import coctailsList from "../cocktails.json";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
+import "../styles/cocktail-page.css";
+import cocktailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
 import equipmentsList from "../equipments.json";
 
 export default function CocktailPage() {
   const params = useParams();
-  const cocktailPageInfo = coctailsList[params.id - 1].pageInfo;
+  const cocktailPageInfo = cocktailsList[params.id - 1].pageInfo;
   const images = cocktailPageInfo.photos.map((photo) => ({
     original: photo,
     thumbnail: photo,

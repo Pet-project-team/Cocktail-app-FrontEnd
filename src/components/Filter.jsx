@@ -8,7 +8,7 @@ export default function Filter() {
     <div id="filter">
       <div id="search">
         <input
-          type="search"
+          type="text"
           placeholder="Find your best cocktail"
           name=""
           id=""

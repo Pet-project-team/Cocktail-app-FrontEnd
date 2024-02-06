@@ -69,6 +69,8 @@ input:focus-visible ~ #search-button #search-icon {
   align-self: stretch;
   line-height: 22px;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 #filter-button {

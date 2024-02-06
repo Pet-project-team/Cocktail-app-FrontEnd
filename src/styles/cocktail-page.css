@@ -177,7 +177,7 @@ button[aria-pressed="true"] .image-gallery-thumbnail-inner,
 h1 {
   color: rgba(0, 0, 0, 0.85);
   text-align: center;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
@@ -188,7 +188,7 @@ h1 {
 
 p {
   color: rgba(0, 0, 0, 0.85);
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -404,6 +404,7 @@ th:first-child::after {
   font-size: 16px;
   font-weight: 400;
   text-wrap: nowrap;
+  font-family: "Roboto", sans-serif;
 
   border-radius: 5px;
   border: 1px solid #d9d9d9;

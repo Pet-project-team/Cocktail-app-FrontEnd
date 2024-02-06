@@ -1,6 +1,6 @@
 import React from "react";
 import SignUp from "./SignUp";
-import "../styles/coctails-list.css";
+import "../styles/cocktails-list.css";
 
 export default function UserCard({
   signUpDisplay,
