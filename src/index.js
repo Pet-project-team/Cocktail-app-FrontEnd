@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Main from "./components/Main";
-import CocktailPage from "./components/CocktailPage";
+import Main from "./pages/Main";
+import CocktailPage from "./pages/CocktailPage";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 

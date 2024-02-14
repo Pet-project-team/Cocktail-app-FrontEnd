@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import fetchDataAPI from "./components/fetchDataAPI";
+import fetchDataAPI from "./features/fetchDataAPI";
 import "./App.css";
 
 const postData = JSON.stringify({

@@ -1,6 +1,6 @@
 import React from "react";
-import Filter from "./Filter";
-import Cocktails from "./Cocktails";
+import Filter from "../components/Filter";
+import Cocktails from "../components/Cocktails";
 
 
 export default function Main() {
