@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  SearchIcon,
+  ClearIcon,
+  FilterIcon,
+  AddIcon,
+} from "../assets/cocktailList/filter/icons/FilterIcons";
 import "../styles/filter.css";
 
 export default function Filter() {
@@ -14,7 +20,7 @@ export default function Filter() {
           id=""
         />
         <button id="search-button">
-          <img id="search-icon" src="searchIcon.svg" />
+          <SearchIcon />
         </button>
       </div>
       <div id="buttons">
@@ -22,16 +28,16 @@ export default function Filter() {
           {isFiltred && (
             <button id="clear-filter">
               Clear filter
-              <img src="clearFilter.svg" alt="" />
+              <ClearIcon />
             </button>
           )}
           <button id="filter-button">
-            <img src="filterIcon.svg" alt="" />
+            <FilterIcon />
             Filter
           </button>
         </div>
         <button id="add-new" href="">
-          <img src="addNew.svg" alt="" />
+          <AddIcon />
           Add new
         </button>
       </div>

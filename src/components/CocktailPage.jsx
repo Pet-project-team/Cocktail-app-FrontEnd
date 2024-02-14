@@ -3,6 +3,15 @@ import ImageGallery from "react-image-gallery";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
+import {
+  PreviousIcon,
+  NextIcon,
+  TwitterIcon,
+  FacebookIcon,
+  CopyIcon,
+  AddIcon,
+  CartIcon,
+} from "../assets/cocktailPage/icons/CocktailPageIcons";
 import "../styles/cocktail-page.css";
 import cocktailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
@@ -25,20 +34,13 @@ export default function CocktailPage() {
   return (
     <>
       <div id="top-links">
-        {currentID - 1 === 0 ? (
-          <Link to="/">
-            <img src="/previous-icon.svg"></img>
-            On main page
-          </Link>
-        ) : (
-          <Link to={"/cocktails/" + (currentID - 1)}>
-            <img src="/previous-icon.svg"></img>
-            Previous cocktail
-          </Link>
-        )}
+        <Link to={currentID - 1 === 0 ? "/" : "/cocktails/" + (currentID - 1)}>
+          <PreviousIcon />
+          {currentID - 1 === 0 ? "On main page" : "Previous cocktail"}
+        </Link>
         <Link to={"/cocktails/" + (currentID + 1)}>
           Next cocktail
-          <img src="/next-icon.svg"></img>
+          <NextIcon />
         </Link>
       </div>
       <div id="cocktail-page">
@@ -65,7 +67,7 @@ export default function CocktailPage() {
               }
               url={currentURL}
             >
-              <img src="/twitter.svg" alt="" />
+              <TwitterIcon />
             </TwitterShareButton>
             <FacebookShareButton
               title={
@@ -75,7 +77,7 @@ export default function CocktailPage() {
               }
               url={currentURL}
             >
-              <img src="/facebook.svg" alt="" />
+              <FacebookIcon />
             </FacebookShareButton>
             <button
               type="button"
@@ -96,7 +98,7 @@ export default function CocktailPage() {
                   });
               }}
             >
-              <img src="/content_copy.svg" alt="" />
+              <CopyIcon />
               {isCopied && <span>Copied!</span>}
             </button>
           </div>
@@ -227,10 +229,7 @@ export default function CocktailPage() {
                         <th scope="col">
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
-                              <img
-                                className="add-button__img"
-                                src="/addNew.svg"
-                              />
+                              <AddIcon />
                               Add to filter
                             </button>
                             {ingredient.haveLink && (
@@ -242,7 +241,7 @@ export default function CocktailPage() {
                                 target="_blank"
                                 rel="noreferrer"
                               >
-                                <img src="/cart.svg" />
+                                <CartIcon />
                                 Marketplace
                               </a>
                             )}
@@ -276,10 +275,7 @@ export default function CocktailPage() {
                         <th scope="col">
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
-                              <img
-                                className="add-button__img"
-                                src="/addNew.svg"
-                              />
+                              <AddIcon />
                               Add to filter
                             </button>
                             {equipment.haveLink && (

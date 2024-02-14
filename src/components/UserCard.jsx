@@ -1,5 +1,6 @@
 import React from "react";
 import SignUp from "./SignUp";
+import { CloseIcon, SignUpIcon } from "../assets/header/icons/HeaderIcons";
 import "../styles/cocktails-list.css";
 
 export default function UserCard({
@@ -28,15 +29,20 @@ export default function UserCard({
             signUpDisplay ? () => onCloseFormClick() : () => onSignUpClick()
           }
         >
-          {signUpDisplay ? "Close Form" : "Sign up"}
-          <img src={signUpDisplay ? "close.svg" : "signUp.svg"} alt="" />
+          {signUpDisplay ? (
+            <>
+              Close Form
+              <CloseIcon />
+            </>
+          ) : (
+            <>
+              Sign up
+              <SignUpIcon />
+            </>
+          )}
         </button>
       </div>
-      {signUpDisplay && (
-        <>
-          <SignUp />
-        </>
-      )}
+      {signUpDisplay && <SignUp />}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import UserCard from "./UserCard";
+import Logo from "../assets/header/logo/Logo.jsx";
 import "../styles/header.css";
 
 export default function Header() {
@@ -28,7 +29,7 @@ export default function Header() {
       <header>
         <div id="logo">
           <Link to="/">
-            <img src="/logo.svg" alt="logo" height="32" />
+            <Logo />
           </Link>
         </div>
         <nav>

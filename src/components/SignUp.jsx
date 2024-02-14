@@ -1,4 +1,5 @@
 import React from "react";
+import { GoogleIcon, FacebookIcon } from "../assets/header/icons/HeaderIcons";
 import "../styles/sign-up.css";
 
 export default function SignUp() {
@@ -6,11 +7,11 @@ export default function SignUp() {
     <div id="sign-up-window">
       <p id="welcome-msg">Welcome back! Wanna get high tonight?</p>
       <button id="google" type="button">
-        <img src="/GoogleLogo.svg" alt="" />
+        <GoogleIcon />
         <p>Sign Up With Google</p>
       </button>
       <button id="facebook" type="button">
-        <img src="/icons8-facebook.svg" alt="" />
+        <FacebookIcon />
         <p>Sign Up With Facebook</p>
       </button>
     </div>
