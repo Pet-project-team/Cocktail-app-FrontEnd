@@ -1,7 +1,6 @@
 import React from "react";
 import SignUp from "./SignUp";
 import { CloseIcon, SignUpIcon } from "../assets/header/icons/HeaderIcons";
-import "../styles/cocktails-list.css";
 
 export default function UserCard({
   signUpDisplay,
