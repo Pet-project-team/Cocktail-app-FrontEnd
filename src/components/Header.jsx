@@ -28,7 +28,12 @@ export default function Header() {
   return (
     <>
       {signUpDisplay && (
-        <button id="close-form" onClick={() => onCloseFormClick()}></button>
+        <button
+          id="close-form"
+          className="box-border absolute cursor-default 
+                     w-full h-calc-close top-[64px] left-0 z-50 "
+          onClick={() => onCloseFormClick()}
+        ></button>
       )}
       <header
         className="relative 

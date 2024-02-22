@@ -543,6 +543,14 @@ video {
   position: relative;
 }
 
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .right-\[20px\] {
   right: 20px;
 }
@@ -551,8 +559,32 @@ video {
   top: 20px;
 }
 
+.top-\[64px\] {
+  top: 64px;
+}
+
+.top-\[69px\] {
+  top: 69px;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-\[60\] {
+  z-index: 60;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mb-\[20px\] {
+  margin-bottom: 20px;
 }
 
 .box-border {
@@ -571,20 +603,60 @@ video {
   height: 242px;
 }
 
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[32px\] {
+  height: 32px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
+.h-\[64px\] {
+  height: 64px;
+}
+
+.h-calc-close {
+  height: calc(100vh - 64px);
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[170px\] {
   width: 170px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[350px\] {
+  width: 350px;
+}
+
+.w-\[40px\] {
+  width: 40px;
 }
 
 .w-calc-20 {
   width: calc(20% - 24px);
 }
 
+.w-full {
+  width: 100%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+.cursor-default {
+  cursor: default;
 }
 
 .list-none {
@@ -607,12 +679,20 @@ video {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-end {
   justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -627,12 +707,61 @@ video {
   gap: 30px;
 }
 
+.gap-\[40px\] {
+  gap: 40px;
+}
+
+.self-center {
+  align-self: center;
+}
+
 .self-stretch {
   align-self: stretch;
 }
 
 .rounded-\[20px\] {
   border-radius: 20px;
+}
+
+.rounded-\[5px\] {
+  border-radius: 5px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-b-\[10px\] {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-y-2 {
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.border-highlighted {
+  --tw-border-opacity: 1;
+  border-color: rgb(10 100 255 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
+.border-b-highlighted {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(10 100 255 / var(--tw-border-opacity));
+}
+
+.bg-highlighted {
+  --tw-bg-opacity: 1;
+  background-color: rgb(10 100 255 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -648,12 +777,43 @@ video {
   padding: 10px;
 }
 
+.p-\[15px\] {
+  padding: 15px;
+}
+
+.px-\[10px\] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.px-\[40px\] {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pb-\[30px\] {
   padding-bottom: 30px;
 }
 
+.pl-\[10px\] {
+  padding-left: 10px;
+}
+
+.pr-\[5px\] {
+  padding-right: 5px;
+}
+
 .text-center {
   text-align: center;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
 }
 
 .text-\[16px\] {
@@ -664,16 +824,42 @@ video {
   font-size: 20px;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-normal {
   font-weight: 400;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.leading-\[150\%\] {
+  line-height: 150%;
 }
 
 .leading-\[22px\] {
   line-height: 22px;
 }
 
+.text-highlighted {
+  --tw-text-opacity: 1;
+  color: rgb(10 100 255 / var(--tw-text-opacity));
+}
+
 .text-primary-text {
   color: rgba(0, 0, 0, 0.85);
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.no-underline {
+  text-decoration-line: none;
 }
 
 .shadow-def-md {
@@ -686,6 +872,16 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -696,4 +892,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.hover\:border-highlighted-hov:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 84 230 / var(--tw-border-opacity));
+}
+
+.hover\:bg-highlighted-hov:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 84 230 / var(--tw-bg-opacity));
+}
+
+.hover\:text-highlighted:hover {
+  --tw-text-opacity: 1;
+  color: rgb(10 100 255 / var(--tw-text-opacity));
 }

@@ -18,7 +18,7 @@ export default function HeaderLink({
           (isActive ? "border-b-highlighted text-highlighted" : "")
         }
         to={linkPath}
-        onClick={hasHandle && (() => handleClick)}
+        onClick={hasHandle ? handleClick : ""}
       >
         {linkName}
       </NavLink>

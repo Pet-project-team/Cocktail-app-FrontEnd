@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      height:{
+        "calc-close" : "calc(100vh - 64px)"
+      },
       width: {
         "calc-20": "calc(20% - 24px)",
       },
