@@ -11,6 +11,8 @@ module.exports = {
       },
       colors: {
         "primary-text": "rgba(0, 0, 0, 0.85)",
+        "highlighted": "rgb(10, 100, 255)",
+        "highlighted-hov": "rgb(0, 84, 230)",
       },
     },
   },

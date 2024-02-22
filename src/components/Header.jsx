@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import UserCard from "./UserCard";
 import Logo from "../assets/header/logo/Logo.jsx";
-import "../styles/header.css";
+import HeaderLink from "./HeaderLink.jsx";
 
 export default function Header() {
   let isLoggedIn = false;
@@ -12,6 +12,10 @@ export default function Header() {
   const [randomRoute, setRandomRoute] = useState(
     "/cocktails/" + (Math.floor(Math.random() * 9) + 1)
   );
+
+  function onRandomCocktailClick() {
+    setRandomRoute("/cocktails/" + (Math.floor(Math.random() * 9) + 1));
+  }
 
   function onSignUpClick() {
     setSignUpDisplay(true);
@@ -26,35 +30,35 @@ export default function Header() {
       {signUpDisplay && (
         <button id="close-form" onClick={() => onCloseFormClick()}></button>
       )}
-      <header>
+      <header
+        className="relative 
+        flex justify-between items-center shrink-0
+        w-full h-[64px] px-[40px] py-0 mb-[20px] rounded-b-[10px]
+        bg-white shadow-def-md"
+      >
         <div id="logo">
-          <Link to="/">
+          <Link
+            className="flex items-center text-primary-text no-underline"
+            to="/"
+          >
             <Logo />
           </Link>
         </div>
         <nav>
-          <ul>
-            <li className="nav_el">
-              <Link to="/">Featured cocktails</Link>
-            </li>
-            <li className="nav_el">
-              <Link to="/constructor">Constructor</Link>
-            </li>
-            <li className="nav_el">
-              <Link
-                onClick={() => {
-                  setRandomRoute(
-                    "/cocktails/" + (Math.floor(Math.random() * 9) + 1)
-                  );
-                }}
-                to={randomRoute}
-              >
-                Random cocktail
-              </Link>
-            </li>
-            <li className="nav_el">
-              <Link to="/about">About us</Link>
-            </li>
+          <ul
+            className="list-none
+            flex justify-center items-center gap-[40px]
+            m-auto p-0"
+          >
+            <HeaderLink linkName={"Featured cocktails"} linkPath={"/"} />
+            <HeaderLink linkName={"Constructor"} linkPath={"/constructor"} />
+            <HeaderLink
+              linkName={"Random cocktail"}
+              linkPath={randomRoute}
+              hasHandle={true}
+              handleClick={onRandomCocktailClick}
+            />
+            <HeaderLink linkName={"About us"} linkPath={"/about"} />
           </ul>
         </nav>
         <UserCard

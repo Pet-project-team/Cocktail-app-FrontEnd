@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CocktailCard({ cardInfo, id }) {
   return (
     <div className="w-calc-20 relative">
-      <button className="like-btn box-border absolute right-[20px] top-[20px] cursor-pointer z-10">
+      <button className="like-btn box-border absolute right-[20px] top-[20px] z-10">
         <svg
           width="24"
           height="24"
