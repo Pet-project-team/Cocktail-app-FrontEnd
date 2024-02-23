@@ -33,18 +33,32 @@ export default function CocktailPage() {
 
   return (
     <>
-      <div id="top-links">
-        <Link to={currentID - 1 === 0 ? "/" : "/cocktails/" + (currentID - 1)}>
-          <PreviousIcon />
+      <div id="top-links" className="flex justify-between h-[30px] mb-[20px]">
+        <Link
+          className="flex items-center text-primary-text text-[16px] transition-all duration-300 hover:text-highlighted"
+          to={currentID - 1 === 0 ? "/" : "/cocktails/" + (currentID - 1)}
+        >
+          <PreviousIcon className="transition-all duration-300" />
           {currentID - 1 === 0 ? "On main page" : "Previous cocktail"}
         </Link>
-        <Link to={"/cocktails/" + (currentID + 1)}>
+        <Link
+          className="flex items-center text-primary-text text-[16px] transition-all duration-300 hover:text-highlighted"
+          to={"/cocktails/" + (currentID + 1)}
+        >
           Next cocktail
-          <NextIcon />
+          <NextIcon className="transition-all duration-300" />
         </Link>
       </div>
-      <div id="cocktail-page">
-        <div id="cocktail-main-info">
+      <div
+        id="cocktail-page"
+        className="flex items-start justify-between gap-[30px] self-stretch 
+                  mb-[40px] p-[40px] rounded-[20px]
+                bg-white shadow-def-md"
+      >
+        <div
+          id="cocktail-main-info"
+          className="flex flex-col items-center gap-[10px] min-w-[300px] w-[25%] max-w-[433px]"
+        >
           <div
             className={images.length > 4 ? "scroll-enable" : "scroll-disable"}
           >
@@ -55,11 +69,21 @@ export default function CocktailPage() {
               items={images}
             />
           </div>
-          <h1>{cocktailPageInfo.cocktailName}</h1>
-          <p>{cocktailPageInfo.cocktailDescription}</p>
-          <div id="share-links">
-            <p>Share</p>
+          <h1 className="text-primary-text text-center text-[28px] font-normal leading-[150%] m-auto">
+            {cocktailPageInfo.cocktailName}
+          </h1>
+          <p className="text-primary-text text-[16px] leading-[150%] m-auto">
+            {cocktailPageInfo.cocktailDescription}
+          </p>
+          <div
+            id="share-links"
+            className="flex items-center gap-[10px] self-stretch"
+          >
+            <p className="text-primary-text text-[16px] leading-[150%] m-0">
+              Share
+            </p>
             <TwitterShareButton
+              className="box-border relative h-[25px] cursor-pointer"
               title={
                 "An incredible recipe for " +
                 cocktailPageInfo.cocktailName +
@@ -70,6 +94,7 @@ export default function CocktailPage() {
               <TwitterIcon />
             </TwitterShareButton>
             <FacebookShareButton
+              className="box-border relative h-[25px] cursor-pointer"
               title={
                 "An incredible recipe for " +
                 cocktailPageInfo.cocktailName +
@@ -81,6 +106,7 @@ export default function CocktailPage() {
             </FacebookShareButton>
             <button
               type="button"
+              className="box-border relative h-[25px] cursor-pointer"
               onClick={() => {
                 navigator.clipboard
                   .writeText(
@@ -99,91 +125,100 @@ export default function CocktailPage() {
               }}
             >
               <CopyIcon />
-              {isCopied && <span>Copied!</span>}
+              {isCopied && (
+                <span className="text-primary-text cursor-default absolute top-[30px] left-[50%] translate-x-[-50%]">
+                  Copied!
+                </span>
+              )}
             </button>
           </div>
         </div>
-        <div id="cocktail-secondary-info">
-          <div id="navigation">
-            <nav>
+        <div id="cocktail-secondary-info" className="w-[70%] h-min">
+          <div id="navigation" className="flex justify-between mb-[10px]">
+            <nav className="flex h-[36px] gap-[30px]">
               <button
                 className={
-                  "nav-info-button" +
+                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
                   " " +
                   (tab === 1
-                    ? "highlighted-cocktail-page-btn"
-                    : "unhighlighted-cocktail-page-btn")
+                    ? "border-b-2 border-b-highlighted text-highlighted"
+                    : "text-primary-text")
                 }
                 type="button"
                 onClick={() => {
                   setTab(1);
                 }}
               >
-                <p>Ingredients</p>
+                Essentials
               </button>
               <button
                 className={
-                  "nav-info-button" +
+                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
                   " " +
                   (tab === 2
-                    ? "highlighted-cocktail-page-btn"
-                    : "unhighlighted-cocktail-page-btn")
+                    ? "border-b-2 border-b-highlighted text-highlighted"
+                    : "text-primary-text")
                 }
                 type="button"
                 onClick={() => {
                   setTab(2);
                 }}
               >
-                <p>Recipe</p>
+                Recipe
               </button>
               <button
                 className={
-                  "nav-info-button" +
+                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
                   " " +
                   (tab === 3
-                    ? "highlighted-cocktail-page-btn"
-                    : "unhighlighted-cocktail-page-btn")
+                    ? "border-b-2 border-b-highlighted text-highlighted"
+                    : "text-primary-text")
                 }
                 type="button"
                 onClick={() => {
                   setTab(3);
                 }}
               >
-                <p>Video tutorial</p>
+                Video tutorial
               </button>
             </nav>
             {tab === 1 && (
-              <div id="measurement">
-                <p id="measurement-title">Measurement:</p>
+              <div id="measurement" className="flex gap-[30px]">
+                <p
+                  id="measurement-title"
+                  className="text-primary-text text-[16px] leading-[150%] h-[36px] pb-[12px] m-0"
+                >
+                  Measurement:
+                </p>
                 <button
                   className={
-                    "nav-info-button" +
+                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2 text-primary-text text-[16px] leading-[150%] m-auto" +
                     " " +
                     (measurement === 2
-                      ? "highlighted-cocktail-page-btn"
-                      : "unhighlighted-cocktail-page-btn")
+                      ? " border-b-highlighted text-highlighted"
+                      : "border-b-transparent text-primary-text")
                   }
                   type="button"
                   onClick={() => {
                     setMeasurement(2);
                   }}
                 >
-                  <p>ml</p>
+                  ml
                 </button>
                 <button
                   className={
-                    "nav-info-button" +
+                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2 text-primary-text text-[16px] leading-[150%] m-auto" +
                     " " +
                     (measurement === 1
-                      ? "highlighted-cocktail-page-btn"
-                      : "unhighlighted-cocktail-page-btn")
+                      ? " border-b-highlighted text-highlighted"
+                      : "border-b-transparent text-primary-text")
                   }
                   type="button"
                   onClick={() => {
                     setMeasurement(1);
                   }}
                 >
-                  <p>oz</p>
+                  oz
                 </button>
               </div>
             )}
@@ -191,31 +226,35 @@ export default function CocktailPage() {
           {tab === 1 && (
             <div id="ingredients-tab">
               <div id="cocktail-secondary-info__content">
-                <h1>Ingredients</h1>
-                <table id="ingredients-table">
+                <h2 className=" text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]">
+                  Ingredients
+                </h2>
+                <table id="ingredients-table" className='border-collapse m-w-[100%] mb-[40px]'>
                   <thead>
                     <tr>
-                      <th scope="col"></th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Measurement</th>
-                      <th scope="col">Links</th>
+                      <th className='relative p-[10px]' scope="col"></th>
+                      <th className='relative p-[10px]' scope="col">Name</th>
+                      <th className='relative p-[10px]' scope="col">Measurement</th>
+                      <th className='relative p-[10px]' scope="col">Links</th>
                     </tr>
                   </thead>
                   <tbody>
                     {cocktailPageInfo.ingredients.map((ingredient) => (
                       <tr>
-                        <th id="image-cell" scope="col">
+                        <th id="image-cell" className='rounded-l-[30px] w-[120px] relative p-[10px]' scope="col">
                           <img
                             src={ingredientsList[ingredient.ingredienId].photo}
                             alt={ingredientsList[ingredient.ingredienId].name}
                           />
                         </th>
-                        <th scope="col">
-                          <p>{ingredientsList[ingredient.ingredienId].name}</p>
+                        <th className='relative p-[10px]' scope="col">
+                          <p className="text-primary-text text-[16px] leading-[150%] m-auto">
+                            {ingredientsList[ingredient.ingredienId].name}
+                          </p>
                         </th>
-                        <th scope="col">
+                        <th className='relative p-[10px]' scope="col">
                           {ingredient.numberOZ && (
-                            <p>
+                            <p className="text-primary-text text-[16px] leading-[150%] m-auto">
                               {measurement === 1
                                 ? ingredient.numberOZ + " oz "
                                 : ingredient.numberOZ * 30 + " ml "}
@@ -223,10 +262,12 @@ export default function CocktailPage() {
                           )}
                           {ingredient.number && <p>{ingredient.number}</p>}
                           {!(ingredient.numberOZ || ingredient.number) && (
-                            <p>-</p>
+                            <p className="text-primary-text text-[16px] leading-[150%] m-auto">
+                              -
+                            </p>
                           )}
                         </th>
-                        <th scope="col">
+                        <th className='relative rounded-r-[30px] w-[195px] p-[25px]' scope="col">
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
                               <AddIcon />
@@ -251,28 +292,32 @@ export default function CocktailPage() {
                     ))}
                   </tbody>
                 </table>
-                <h1>Equipment</h1>
+                <h2 className=" text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]">
+                  Equipment
+                </h2>
                 <table id="equipments-table">
                   <thead>
                     <tr>
-                      <th scope="col"></th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Links</th>
+                      <th className='relative p-[10px]' scope="col"></th>
+                      <th className='relative p-[10px]' scope="col">Name</th>
+                      <th className='relative p-[10px]' scope="col">Links</th>
                     </tr>
                   </thead>
                   <tbody>
                     {cocktailPageInfo.equipments.map((equipment) => (
                       <tr>
-                        <th id="image-cell" scope="col">
+                        <th id="image-cell" className='w-[120px] relative p-[10px] rounded-l-[30px]' scope="col">
                           <img
                             src={equipmentsList[equipment.equipmentId].photo}
                             alt={equipmentsList[equipment.equipmentId].name}
                           />
                         </th>
-                        <th scope="col">
-                          <p>{equipmentsList[equipment.equipmentId].name}</p>
+                        <th className='relative p-[10px]' scope="col">
+                          <p className="text-primary-text text-[16px] leading-[150%] m-auto">
+                            {equipmentsList[equipment.equipmentId].name}
+                          </p>
                         </th>
-                        <th scope="col">
+                        <th className='relative rounded-r-[30px] w-[195px] p-[25px]' scope="col">
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
                               <AddIcon />
@@ -299,11 +344,19 @@ export default function CocktailPage() {
           )}
           {tab === 2 && (
             <div id="recipe-tab">
-              <h1 id="recipe-title">Step by step</h1>
+              <h1
+                className=" text-primary-text text-center text-[28px] font-normal leading-[150%] m-auto"
+                id="recipe-title"
+              >
+                Step by step
+              </h1>
               {cocktailPageInfo.recipe.map((element) => (
                 <>
                   {element.type === "p" && (
-                    <p id="recipe-step">
+                    <p
+                      id="recipe-step"
+                      className="text-primary-text text-[16px] leading-[150%] m-auto"
+                    >
                       {element.step && <span>{element.step}</span>}
                       {" " + element.content}
                     </p>

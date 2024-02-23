@@ -39,7 +39,7 @@ export default function UserCard({
     <div id="sign-up-container" className="flex justify-end w-[200px]">
       <div
         id="sign-up-button-container"
-        className="flex flex-col justify-center items-center w-[150px]"
+        className="flex flex-row justify-end items-center w-[150px]"
       >
         <button
           id="sign-up"

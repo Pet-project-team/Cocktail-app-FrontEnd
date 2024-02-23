@@ -38,10 +38,10 @@ export default function Header() {
       <header
         className="relative 
         flex justify-between items-center shrink-0
-        w-full h-[64px] px-[40px] py-0 mb-[20px] rounded-b-[10px]
+        w-full h-[64px] px-[30px] py-0 mb-[20px] rounded-b-[10px]
         bg-white shadow-def-md"
       >
-        <div id="logo">
+        <div id="logo" className="w-[200px]">
           <Link
             className="flex items-center text-primary-text no-underline"
             to="/"
