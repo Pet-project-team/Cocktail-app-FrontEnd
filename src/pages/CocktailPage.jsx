@@ -16,6 +16,7 @@ import "../styles/cocktail-page.css";
 import cocktailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
 import equipmentsList from "../equipments.json";
+import CocktailPageTab from "../components/CocktailPageTab";
 
 export default function CocktailPage() {
   const params = useParams();
@@ -136,51 +137,24 @@ export default function CocktailPage() {
         <div id="cocktail-secondary-info" className="w-[70%] h-min">
           <div id="navigation" className="flex justify-between mb-[10px]">
             <nav className="flex h-[36px] gap-[30px]">
-              <button
-                className={
-                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
-                  " " +
-                  (tab === 1
-                    ? "border-b-2 border-b-highlighted text-highlighted"
-                    : "text-primary-text")
-                }
-                type="button"
-                onClick={() => {
-                  setTab(1);
-                }}
-              >
-                Essentials
-              </button>
-              <button
-                className={
-                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
-                  " " +
-                  (tab === 2
-                    ? "border-b-2 border-b-highlighted text-highlighted"
-                    : "text-primary-text")
-                }
-                type="button"
-                onClick={() => {
-                  setTab(2);
-                }}
-              >
-                Recipe
-              </button>
-              <button
-                className={
-                  "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted" +
-                  " " +
-                  (tab === 3
-                    ? "border-b-2 border-b-highlighted text-highlighted"
-                    : "text-primary-text")
-                }
-                type="button"
-                onClick={() => {
-                  setTab(3);
-                }}
-              >
-                Video tutorial
-              </button>
+              <CocktailPageTab
+                tabName={"Essentials"}
+                comparedTab={tab}
+                tabValue={1}
+                setComparedTab={setTab}
+              />
+              <CocktailPageTab
+                tabName={"Recipe"}
+                comparedTab={tab}
+                tabValue={2}
+                setComparedTab={setTab}
+              />
+              <CocktailPageTab
+                tabName={"Video tutorial"}
+                comparedTab={tab}
+                tabValue={3}
+                setComparedTab={setTab}
+              />
             </nav>
             {tab === 1 && (
               <div id="measurement" className="flex gap-[30px]">
@@ -190,36 +164,18 @@ export default function CocktailPage() {
                 >
                   Measurement:
                 </p>
-                <button
-                  className={
-                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2" +
-                    " " +
-                    (measurement === 2
-                      ? " border-b-highlighted text-highlighted"
-                      : "border-b-transparent text-primary-text")
-                  }
-                  type="button"
-                  onClick={() => {
-                    setMeasurement(2);
-                  }}
-                >
-                  ml
-                </button>
-                <button
-                  className={
-                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2" +
-                    " " +
-                    (measurement === 1
-                      ? " border-b-highlighted text-highlighted"
-                      : "border-b-transparent text-primary-text")
-                  }
-                  type="button"
-                  onClick={() => {
-                    setMeasurement(1);
-                  }}
-                >
-                  oz
-                </button>
+                <CocktailPageTab
+                  tabName={"ml"}
+                  comparedTab={measurement}
+                  tabValue={1}
+                  setComparedTab={setMeasurement}
+                />
+                <CocktailPageTab
+                  tabName={"oz"}
+                  comparedTab={measurement}
+                  tabValue={2}
+                  setComparedTab={setMeasurement}
+                />
               </div>
             )}
           </div>
@@ -229,30 +185,43 @@ export default function CocktailPage() {
                 <h2 className=" text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]">
                   Ingredients
                 </h2>
-                <table id="ingredients-table" className='border-collapse m-w-[100%] mb-[40px]'>
+                <table
+                  id="ingredients-table"
+                  className="border-collapse m-w-[100%] mb-[40px]"
+                >
                   <thead>
                     <tr>
-                      <th className='relative p-[10px]' scope="col"></th>
-                      <th className='relative p-[10px]' scope="col">Name</th>
-                      <th className='relative p-[10px]' scope="col">Measurement</th>
-                      <th className='relative p-[10px]' scope="col">Links</th>
+                      <th className="relative p-[10px]" scope="col"></th>
+                      <th className="relative p-[10px]" scope="col">
+                        Name
+                      </th>
+                      <th className="relative p-[10px]" scope="col">
+                        Measurement
+                      </th>
+                      <th className="relative p-[10px]" scope="col">
+                        Links
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {cocktailPageInfo.ingredients.map((ingredient) => (
                       <tr>
-                        <th id="image-cell" className='rounded-l-[30px] w-[120px] relative p-[10px]' scope="col">
+                        <th
+                          id="image-cell"
+                          className="rounded-l-[30px] w-[120px] relative p-[10px]"
+                          scope="col"
+                        >
                           <img
                             src={ingredientsList[ingredient.ingredienId].photo}
                             alt={ingredientsList[ingredient.ingredienId].name}
                           />
                         </th>
-                        <th className='relative p-[10px]' scope="col">
+                        <th className="relative p-[10px]" scope="col">
                           <p className="text-primary-text text-[16px] leading-[150%] m-auto">
                             {ingredientsList[ingredient.ingredienId].name}
                           </p>
                         </th>
-                        <th className='relative p-[10px]' scope="col">
+                        <th className="relative p-[10px]" scope="col">
                           {ingredient.numberOZ && (
                             <p className="text-primary-text text-[16px] leading-[150%] m-auto">
                               {measurement === 1
@@ -267,7 +236,10 @@ export default function CocktailPage() {
                             </p>
                           )}
                         </th>
-                        <th className='relative rounded-r-[30px] w-[195px] p-[25px]' scope="col">
+                        <th
+                          className="relative rounded-r-[30px] w-[195px] p-[25px]"
+                          scope="col"
+                        >
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
                               <AddIcon />
@@ -298,26 +270,37 @@ export default function CocktailPage() {
                 <table id="equipments-table">
                   <thead>
                     <tr>
-                      <th className='relative p-[10px]' scope="col"></th>
-                      <th className='relative p-[10px]' scope="col">Name</th>
-                      <th className='relative p-[10px]' scope="col">Links</th>
+                      <th className="relative p-[10px]" scope="col"></th>
+                      <th className="relative p-[10px]" scope="col">
+                        Name
+                      </th>
+                      <th className="relative p-[10px]" scope="col">
+                        Links
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {cocktailPageInfo.equipments.map((equipment) => (
                       <tr>
-                        <th id="image-cell" className='w-[120px] relative p-[10px] rounded-l-[30px]' scope="col">
+                        <th
+                          id="image-cell"
+                          className="w-[120px] relative p-[10px] rounded-l-[30px]"
+                          scope="col"
+                        >
                           <img
                             src={equipmentsList[equipment.equipmentId].photo}
                             alt={equipmentsList[equipment.equipmentId].name}
                           />
                         </th>
-                        <th className='relative p-[10px]' scope="col">
+                        <th className="relative p-[10px]" scope="col">
                           <p className="text-primary-text text-[16px] leading-[150%] m-auto">
                             {equipmentsList[equipment.equipmentId].name}
                           </p>
                         </th>
-                        <th className='relative rounded-r-[30px] w-[195px] p-[25px]' scope="col">
+                        <th
+                          className="relative rounded-r-[30px] w-[195px] p-[25px]"
+                          scope="col"
+                        >
                           <div className="btn-container">
                             <button className="ingredient-btn" type="button">
                               <AddIcon />
