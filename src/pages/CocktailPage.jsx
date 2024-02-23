@@ -192,7 +192,7 @@ export default function CocktailPage() {
                 </p>
                 <button
                   className={
-                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2 text-primary-text text-[16px] leading-[150%] m-auto" +
+                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2" +
                     " " +
                     (measurement === 2
                       ? " border-b-highlighted text-highlighted"
@@ -207,7 +207,7 @@ export default function CocktailPage() {
                 </button>
                 <button
                   className={
-                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2 text-primary-text text-[16px] leading-[150%] m-auto" +
+                    "nav-info-button box-border h-[36px] flex cursor-pointer transition-all duration-300 text-[16px] leading-[150%] m-auto hover:text-highlighted border-b-2" +
                     " " +
                     (measurement === 1
                       ? " border-b-highlighted text-highlighted"
