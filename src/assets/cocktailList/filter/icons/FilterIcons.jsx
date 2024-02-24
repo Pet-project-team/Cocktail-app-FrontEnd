@@ -6,7 +6,14 @@ import filterIcon from "./filterIcon.svg";
 import addIcon from "./addNew.svg";
 
 export function SearchIcon() {
-  return <img id="search-icon" src={searchIcon} alt="" />;
+  return (
+    <img
+      id="search-icon"
+      className="w-[30px] border-l-[1px] border-slate-300"
+      src={searchIcon}
+      alt=""
+    />
+  );
 }
 export function ClearIcon() {
   return <img src={clearIcon} alt="" />;

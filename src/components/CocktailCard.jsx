@@ -4,6 +4,29 @@ import { Link } from "react-router-dom";
 export default function CocktailCard({ cardInfo, id }) {
   return (
     <div className="w-calc-20 relative">
+      <Link
+        to={"cocktails/" + id}
+        className="cocktail-card 
+        box-border relative flex flex-col justify-between items-center 
+        p-[10px] pb-[30px] rounded-[20px]
+      bg-white shadow-def-md"
+      >
+        <div>
+          <img
+            className="card__photo w-[170px] h-[242px] shrink-0"
+            src={cardInfo.cocktailPhoto}
+            alt=""
+          ></img>
+        </div>
+        <div className="card__info flex flex-col justify-end items-center self-stretch gap-[10px]">
+          <p className="main-component-name text-primary-text text-center text-[16px] font-normal leading-[22px]">
+            {cardInfo.mainCompName}
+          </p>
+          <p className="cocktail-name text-primary-text text-center text-[20px] font-normal leading-[22px]">
+            {cardInfo.cocktailName}
+          </p>
+        </div>
+      </Link>
       <button className="like-btn box-border absolute right-[20px] top-[20px] z-10">
         <svg
           width="24"
@@ -20,28 +43,6 @@ export default function CocktailCard({ cardInfo, id }) {
           />
         </svg>
       </button>
-      <Link
-        to={"cocktails/" + id}
-        className="cocktail-card 
-        box-border relative flex flex-col justify-between items-center 
-        p-[10px] pb-[30px] rounded-[20px]
-      bg-white shadow-def-md"
-      >
-        <div>
-          <img
-            src={cardInfo.cocktailPhoto}
-            className="card__photo w-[170px] h-[242px] shrink-0"
-          ></img>
-        </div>
-        <div className="card__info flex flex-col justify-end items-center self-stretch gap-[10px]">
-          <p className="main-component-name text-primary-text text-center text-[16px] font-normal leading-[22px]">
-            {cardInfo.mainCompName}
-          </p>
-          <p className="cocktail-name text-primary-text text-center text-[20px] font-normal leading-[22px]">
-            {cardInfo.cocktailName}
-          </p>
-        </div>
-      </Link>
     </div>
   );
 }

@@ -35,5 +35,7 @@ export function CartIcon() {
   return <img src={cartIcon} alt="" />;
 }
 export function AddIcon() {
-  return <img className="add-button__img" src={addIcon} alt="" />;
+  return (
+    <img className="add-button__img w-[12px] h-[12px]" src={addIcon} alt="" />
+  );
 }

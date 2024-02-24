@@ -9,14 +9,13 @@ import {
   TwitterIcon,
   FacebookIcon,
   CopyIcon,
-  AddIcon,
-  CartIcon,
 } from "../assets/cocktailPage/icons/CocktailPageIcons";
 import "../styles/cocktail-page.css";
 import cocktailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
 import equipmentsList from "../equipments.json";
 import CocktailPageTab from "../components/CocktailPageTab";
+import CocktailPageTable from "../components/CocktailPageTable";
 
 export default function CocktailPage() {
   const params = useParams();
@@ -53,7 +52,7 @@ export default function CocktailPage() {
       <div
         id="cocktail-page"
         className="flex items-start justify-between gap-[30px] self-stretch 
-                  mb-[40px] p-[40px] rounded-[20px]
+                  mb-[40px] p-[30px] rounded-[20px]
                 bg-white shadow-def-md"
       >
         <div
@@ -185,168 +184,49 @@ export default function CocktailPage() {
                 <h2 className=" text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]">
                   Ingredients
                 </h2>
-                <table
-                  id="ingredients-table"
-                  className="border-collapse m-w-[100%] mb-[40px]"
-                >
-                  <thead>
-                    <tr>
-                      <th className="relative p-[10px]" scope="col"></th>
-                      <th className="relative p-[10px]" scope="col">
-                        Name
-                      </th>
-                      <th className="relative p-[10px]" scope="col">
-                        Measurement
-                      </th>
-                      <th className="relative p-[10px]" scope="col">
-                        Links
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {cocktailPageInfo.ingredients.map((ingredient) => (
-                      <tr>
-                        <th
-                          id="image-cell"
-                          className="rounded-l-[30px] w-[120px] relative p-[10px]"
-                          scope="col"
-                        >
-                          <img
-                            src={ingredientsList[ingredient.ingredienId].photo}
-                            alt={ingredientsList[ingredient.ingredienId].name}
-                          />
-                        </th>
-                        <th className="relative p-[10px]" scope="col">
-                          <p className="text-primary-text text-[16px] leading-[150%] m-auto">
-                            {ingredientsList[ingredient.ingredienId].name}
-                          </p>
-                        </th>
-                        <th className="relative p-[10px]" scope="col">
-                          {ingredient.numberOZ && (
-                            <p className="text-primary-text text-[16px] leading-[150%] m-auto">
-                              {measurement === 1
-                                ? ingredient.numberOZ + " oz "
-                                : ingredient.numberOZ * 30 + " ml "}
-                            </p>
-                          )}
-                          {ingredient.number && <p>{ingredient.number}</p>}
-                          {!(ingredient.numberOZ || ingredient.number) && (
-                            <p className="text-primary-text text-[16px] leading-[150%] m-auto">
-                              -
-                            </p>
-                          )}
-                        </th>
-                        <th
-                          className="relative rounded-r-[30px] w-[195px] p-[25px]"
-                          scope="col"
-                        >
-                          <div className="btn-container">
-                            <button className="ingredient-btn" type="button">
-                              <AddIcon />
-                              Add to filter
-                            </button>
-                            {ingredient.haveLink && (
-                              <a
-                                className="ingredient-btn"
-                                href={
-                                  ingredientsList[ingredient.ingredienId].url
-                                }
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                <CartIcon />
-                                Marketplace
-                              </a>
-                            )}
-                          </div>
-                        </th>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <CocktailPageTable
+                  items={cocktailPageInfo.ingredients}
+                  list={ingredientsList}
+                  measurement={measurement}
+                />
                 <h2 className=" text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]">
                   Equipment
                 </h2>
-                <table id="equipments-table">
-                  <thead>
-                    <tr>
-                      <th className="relative p-[10px]" scope="col"></th>
-                      <th className="relative p-[10px]" scope="col">
-                        Name
-                      </th>
-                      <th className="relative p-[10px]" scope="col">
-                        Links
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {cocktailPageInfo.equipments.map((equipment) => (
-                      <tr>
-                        <th
-                          id="image-cell"
-                          className="w-[120px] relative p-[10px] rounded-l-[30px]"
-                          scope="col"
-                        >
-                          <img
-                            src={equipmentsList[equipment.equipmentId].photo}
-                            alt={equipmentsList[equipment.equipmentId].name}
-                          />
-                        </th>
-                        <th className="relative p-[10px]" scope="col">
-                          <p className="text-primary-text text-[16px] leading-[150%] m-auto">
-                            {equipmentsList[equipment.equipmentId].name}
-                          </p>
-                        </th>
-                        <th
-                          className="relative rounded-r-[30px] w-[195px] p-[25px]"
-                          scope="col"
-                        >
-                          <div className="btn-container">
-                            <button className="ingredient-btn" type="button">
-                              <AddIcon />
-                              Add to filter
-                            </button>
-                            {equipment.haveLink && (
-                              <a
-                                className="ingredient-btn"
-                                href={equipmentsList[equipment.equipmentId].url}
-                                target="_blank"
-                                rel="noreferrer"
-                              >
-                                Marketplace
-                              </a>
-                            )}
-                          </div>
-                        </th>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <CocktailPageTable
+                  items={cocktailPageInfo.equipments}
+                  list={equipmentsList}
+                  measurement={null}
+                />
               </div>
             </div>
           )}
           {tab === 2 && (
             <div id="recipe-tab">
-              <h1
-                className=" text-primary-text text-center text-[28px] font-normal leading-[150%] m-auto"
+              <h2
+                className="text-primary-text text-start text-[24px] font-normal leading-[150%] mb-[10px]"
                 id="recipe-title"
               >
                 Step by step
-              </h1>
+              </h2>
               {cocktailPageInfo.recipe.map((element) => (
                 <>
                   {element.type === "p" && (
                     <p
                       id="recipe-step"
-                      className="text-primary-text text-[16px] leading-[150%] m-auto"
+                      className="text-primary-text text-[18px] leading-[150%] m-auto mb-[10px]"
                     >
-                      {element.step && <span>{element.step}</span>}
+                      {element.step && (
+                        <span className="text-highlighted text-[22px]">
+                          {element.step}
+                        </span>
+                      )}
                       {" " + element.content}
                     </p>
                   )}
                   {element.type === "img" && (
                     <img
                       id="recipe-step-img"
+                      className="h-[300px] mb-[30px] rounded-[20px]"
                       alt="related to step text"
                       src={element.url}
                     ></img>
@@ -359,6 +239,7 @@ export default function CocktailPage() {
             <div id="video-tab">
               <iframe
                 width="100%"
+                className="aspect-video"
                 src={cocktailPageInfo.youtubeURL}
                 title="YouTube video player"
                 frameborder="0"
