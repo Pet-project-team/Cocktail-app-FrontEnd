@@ -1,5 +1,5 @@
 import React from "react";
-import { GoogleIcon, FacebookIcon } from "../assets/header/icons/HeaderIcons";
+import { GoogleIcon, FacebookIcon } from "../../assets/header/icons/HeaderIcons";
 
 export default function SignUp() {
   return (

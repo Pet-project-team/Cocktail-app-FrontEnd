@@ -9,13 +9,13 @@ import {
   TwitterIcon,
   FacebookIcon,
   CopyIcon,
-} from "../assets/cocktailPage/icons/CocktailPageIcons";
+} from "../assets/cocktail_page/icons/CocktailPageIcons";
 import "../styles/cocktail-page.css";
 import cocktailsList from "../cocktails.json";
 import ingredientsList from "../ingredients.json";
 import equipmentsList from "../equipments.json";
-import CocktailPageTab from "../components/CocktailPageTab";
-import CocktailPageTable from "../components/CocktailPageTable";
+import CocktailPageTab from "../components/cocktail_page/CocktailPageTab";
+import CocktailPageTable from "../components/cocktail_page/CocktailPageTable";
 
 export default function CocktailPage() {
   const params = useParams();

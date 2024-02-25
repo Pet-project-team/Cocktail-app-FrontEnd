@@ -3,7 +3,7 @@ import React from "react";
 import {
   AddIcon,
   CartIcon,
-} from "../assets/cocktailPage/icons/CocktailPageIcons";
+} from "../../assets/cocktail_page/icons/CocktailPageIcons";
 
 // cocktailPageInfo.ingredients - items
 // ingredientsList - list

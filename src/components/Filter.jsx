@@ -4,7 +4,7 @@ import {
   ClearIcon,
   FilterIcon,
   AddIcon,
-} from "../assets/cocktailList/filter/icons/FilterIcons";
+} from "../assets/cocktail_list/filter/icons/FilterIcons";
 import "../styles/filter.css";
 
 export default function Filter() {

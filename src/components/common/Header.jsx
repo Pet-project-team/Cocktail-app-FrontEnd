@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import UserCard from "./UserCard";
-import Logo from "../assets/header/logo/Logo.jsx";
+import UserCard from "./UserCard.jsx";
+import Logo from "../../assets/header/logo/Logo.jsx";
 import HeaderLink from "./HeaderLink.jsx";
 
 export default function Header() {
