@@ -1,10 +1,5 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
-#top-links a:hover img {
-  filter: brightness(0) saturate(100%) invert(41%) sepia(59%) saturate(2236%)
-    hue-rotate(193deg) brightness(103%) contrast(105%);
-}
-
 .image-gallery,
 .image-gallery-slides,
 .image-gallery-swipe,
@@ -123,8 +118,9 @@ button[aria-pressed="true"] .image-gallery-thumbnail-inner,
 
 /* */
 
-tbody tr:nth-child(odd) th::after {
-  background: #ffffff;
+#top-links a:hover img {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(59%) saturate(2236%)
+    hue-rotate(193deg) brightness(103%) contrast(105%);
 }
 
 .add-button__img {

@@ -897,7 +897,7 @@ video {
   border-bottom-width: 2px;
 }
 
-.border-l-\[1px\] {
+.border-l {
   border-left-width: 1px;
 }
 
@@ -1186,4 +1186,19 @@ code {
 .hover\:text-highlighted:hover {
   --tw-text-opacity: 1;
   color: rgb(10 100 255 / var(--tw-text-opacity));
+}
+
+.group:nth-child(odd) .group-odd\:after\:bg-white::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.peer:focus-within ~ .peer-focus-within\:border-l-2 {
+  border-left-width: 2px;
+}
+
+.peer:focus-within ~ .peer-focus-within\:border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }

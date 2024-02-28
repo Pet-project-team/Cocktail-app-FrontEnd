@@ -6,21 +6,14 @@ import filterIcon from "./filterIcon.svg";
 import addIcon from "./addNew.svg";
 
 export function SearchIcon() {
-  return (
-    <img
-      id="search-icon"
-      className="w-[30px] border-l-[1px] border-slate-300"
-      src={searchIcon}
-      alt=""
-    />
-  );
+  return <img id='search-icon' className='w-[30px]' src={searchIcon} alt='' />;
 }
 export function ClearIcon() {
-  return <img src={clearIcon} alt="" />;
+  return <img src={clearIcon} alt='' />;
 }
 export function FilterIcon() {
-  return <img src={filterIcon} alt="" />;
+  return <img src={filterIcon} alt='' />;
 }
 export function AddIcon() {
-  return <img src={addIcon} alt="" />;
+  return <img src={addIcon} alt='' />;
 }
