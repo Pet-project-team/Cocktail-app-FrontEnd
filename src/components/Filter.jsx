@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   SearchIcon,
   ClearIcon,
   FilterIcon,
   AddIcon,
-} from "../assets/cocktail_list/filter/icons/FilterIcons";
+} from '../assets/cocktail_list/filter/icons/FilterIcons';
 
 export default function Filter() {
   let isFiltred = false;

@@ -5,7 +5,6 @@ async function fetchDataAPI(
   body = null,
   queryParams = {}
 ) {
-
   // Check if params are not undefined
   method = method || 'GET';
   headers = headers || {};
@@ -15,7 +14,10 @@ async function fetchDataAPI(
   try {
     // Append query parameters to the URL if they exist
     const queryString = Object.keys(queryParams)
-      .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`)
+      .map(
+        (key) =>
+          `${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`
+      )
       .join('&');
 
     const fullUrl = queryString ? `${url}?${queryString}` : url;
@@ -33,8 +35,7 @@ async function fetchDataAPI(
 
     const data = await response.json();
     return data;
-  }
-  catch (error) {
+  } catch (error) {
     // Handle other errors
     console.error('Fetch Error:', error.message);
     throw error;

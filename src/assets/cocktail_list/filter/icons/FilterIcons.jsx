@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 //icons
-import searchIcon from "./searchIcon.svg";
-import clearIcon from "./clearFilter.svg";
-import filterIcon from "./filterIcon.svg";
-import addIcon from "./addNew.svg";
+import searchIcon from './searchIcon.svg';
+import clearIcon from './clearFilter.svg';
+import filterIcon from './filterIcon.svg';
+import addIcon from './addNew.svg';
 
 export function SearchIcon() {
   return <img id='search-icon' className='w-[30px]' src={searchIcon} alt='' />;

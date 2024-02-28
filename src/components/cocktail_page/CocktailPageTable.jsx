@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 import {
   AddIcon,
   CartIcon,
-} from "../../assets/cocktail_page/icons/CocktailPageIcons";
+} from '../../assets/cocktail_page/icons/CocktailPageIcons';
 
 export default function CocktailPageTable({ items, list, measurement }) {
   let id = 0;
@@ -75,8 +75,8 @@ export default function CocktailPageTable({ items, list, measurement }) {
                     {item.numberOZ && (
                       <p className='text-primary-text text-[16px] leading-[150%] m-auto'>
                         {measurement === 1
-                          ? item.numberOZ + " oz "
-                          : item.numberOZ * 30 + " ml "}
+                          ? item.numberOZ + ' oz '
+                          : item.numberOZ * 30 + ' ml '}
                       </p>
                     )}
                     {item.number && <p>{item.number}</p>}
